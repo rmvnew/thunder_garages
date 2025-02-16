@@ -3297,6 +3297,42 @@ garagesConfig.garageList = {
 			[2] = {vec3(971.73,49.11,80.49), h = 326.01},
 		}
 	},
+	[218] = {
+		type = 'public',
+		coords = vec3(-1491.92,-664.94,28.95),
+		perm = nil,
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(-1486.18,-663.63,28.51), h = 217.41},
+			[2] = {vec3(-1480.64,-659.74,28.51), h = 215.61},
+		}
+	},
+	[219] = {
+		type = 'service',
+		coords = vec3(1312.91,-170.75,108.93),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(1308.16,-163.56,108.78), h = 50.29}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[220] = {
+		type = 'service',
+		coords = vec3(-1425.78,-636.3,40.86),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(-1428.13,-627.98,40.79), h = 29.51}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
 
 	      
 }
@@ -3320,5 +3356,11 @@ garagesConfig.garageList = {
 -- 	}
 
 -- end	
+
+
+exports("getGaragesConfig", function ()
+    return garagesConfig
+end) 
+
 
 return garagesConfig
