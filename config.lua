@@ -1340,13 +1340,13 @@ garagesConfig.garageList = {
 		}
 	},
 	[66] = {
-		type = 'public',
-		coords = vec3(335.58, -2027.64, 21.64),
-		perm = nil,
-		hidden = true,
-		vehiclePositions = {
-			[1] = {vec3(331.39, -2032.6, 21.37), h = 138.9}
-		}
+		-- type = 'public',
+		-- coords = vec3(335.58, -2027.64, 21.64),
+		-- perm = nil,
+		-- hidden = true,
+		-- vehiclePositions = {
+		-- 	[1] = {vec3(331.39, -2032.6, 21.37), h = 138.9}
+		-- }
 	},
 	[67] = {
 		type = 'public',
@@ -1371,7 +1371,7 @@ garagesConfig.garageList = {
 		type = 'public',
 		coords = vec3(-3199.71, 824.64, 8.93),
 		perm = nil,
-		hidden = false,
+		hidden = true,
 		vehiclePositions = {
 			[1] = {vec3(-3197.07, 815.77, 9.17), h = 212.6}
 		}
@@ -2661,12 +2661,12 @@ garagesConfig.garageList = {
 	},
 	[174] = {
 		type = 'service',
-		coords = vec3(-156.1,-1583.23,34.61),
+		coords = vec3(2479.34,4112.34,38.08),
 		perm = 'perm.canada',
 		hidden = false,
 		vehiclePositions = {
-			[1] = {vec3(-154.57,-1569.95,35.08), h = 320.58},
-			[2] = {vec3(-167.23,-1585.21,35.0), h = 317.8},
+			[1] = {vec3(2483.5,4114.71,38.03), h = 245.37},
+			[2] = {vec3(2487.31,4121.75,38.08), h = 246.67},
 			
 		},
 		vehicles = {
@@ -2677,11 +2677,11 @@ garagesConfig.garageList = {
 	},
 	[175] = {
 		type = 'service',
-		coords = vec3(-175.05,-1734.3,32.1),
+		coords = vec3(2518.81,4092.73,43.76),
 		perm = 'perm.vips',
 		hidden = true,
 		vehiclePositions = {
-			[1] = {vec3(-182.41,-1739.74,31.93), h = 133.98}
+			[1] = {vec3(2512.45,4090.04,43.44), h = 64.39}
 		},
 		vehicles = {
 			{vehicle = 'volatus', modelo = 'volatus'},
@@ -2899,12 +2899,12 @@ garagesConfig.garageList = {
 
 	[192] = {
 		type = 'service',
-		coords = vec3(330.85,-2023.58,21.55),
+		coords = vec3(-1737.28,-210.79,57.42),
 		perm = 'perm.argentina',
 		hidden = false,
 		vehiclePositions = {
-			[1] = {vec3(325.57,-2025.79,21.26), h = 139.22},
-			[2] = {vec3(320.81,-2022.03,21.05), h = 141.13},
+			[1] = {vec3(-1737.99,-205.67,57.83), h = 53.95},
+			[2] = {vec3(-1746.32,-195.7,57.85), h = 31.91},
 			
 			
 		},
@@ -2920,7 +2920,7 @@ garagesConfig.garageList = {
 		perm = 'perm.vips',
 		hidden = true,
 		vehiclePositions = {
-			[1] = {vec3(350.47,-2052.71,21.74), h = 52.36}
+			[1] = {vec3(-1792.03,-190.29,64.42), h = 132.88}
 		},
 		vehicles = {
 			{vehicle = 'volatus', modelo = 'volatus'},
@@ -3331,6 +3331,36 @@ garagesConfig.garageList = {
 		vehicles = {
 			{vehicle = 'volatus', modelo = 'volatus'},
 			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[221] = {
+		type = 'public',
+		coords = vec3(-900.1,-153.33,41.89),
+		perm = nil,
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(-902.21,-159.32,41.6), h = 27.27},
+			[2] = {vec3(-908.05,-163.37,41.6), h = 26.79},
+		}
+	},
+	[222] = {
+		type = 'public',
+		coords = vec3(2510.09,4104.68,38.72),
+		perm = nil,
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(2509.22,4111.1,38.0), h = 27.52},
+			[2] = {vec3(2511.7,4116.03,38.03), h = 26.02},
+		}
+	},
+	[223] = {
+		type = 'public',
+		coords = vec3(-1751.48,-178.11,58.0),
+		perm = nil,
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(-1746.69,-181.23,57.12), h = 336.92},
+			[2] = {vec3(-1738.08,-170.86,57.88), h = 307.92},
 		}
 	},
 
