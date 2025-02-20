@@ -569,6 +569,8 @@ garagesConfig.listCars = {
     [GetHashKey('agsamaseratipm')] = { model = 'agsamaseratipm', price = 110000, banned = false, name = 'agsamaseratipm', trunk = 70, type = 'vip' },
 	[GetHashKey('agsacorollapm')] = { model = 'agsacorollapm', price = 110000, banned = false, name = 'agsacorollapm', trunk = 70, type = 'vip' },
     [GetHashKey('agsa911pm')] = { model = 'agsa911pm', price = 110000, banned = false, name = 'agsa911pm', trunk = 70, type = 'vip' },
+   
+	[GetHashKey('wrtrxmecdk')] = { model = 'wrtrxmecdk', price = 110000, banned = false, name = 'wrtrxmecdk', trunk = 250, type = 'work' },
 
 }
 
@@ -1340,13 +1342,13 @@ garagesConfig.garageList = {
 		}
 	},
 	[66] = {
-		-- type = 'public',
-		-- coords = vec3(335.58, -2027.64, 21.64),
-		-- perm = nil,
-		-- hidden = true,
-		-- vehiclePositions = {
-		-- 	[1] = {vec3(331.39, -2032.6, 21.37), h = 138.9}
-		-- }
+		type = 'public',
+		coords = vec3(335.58, -2027.64, 21.64),
+		perm = nil,
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(331.39, -2032.6, 21.37), h = 138.9}
+		}
 	},
 	[67] = {
 		type = 'public',
@@ -3361,6 +3363,23 @@ garagesConfig.garageList = {
 		vehiclePositions = {
 			[1] = {vec3(-1746.69,-181.23,57.12), h = 336.92},
 			[2] = {vec3(-1738.08,-170.86,57.88), h = 307.92},
+		}
+	},
+	[224] = {
+		type = 'service',
+		coords = vec3(969.34,-1044.94,41.03),
+		perm = 'perm.mecanica',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(975.83,-1042.45,40.81), h = 271.16},
+			[2] = {vec3(977.37,-1036.35,41.21), h = 269.27},
+			
+			
+		},
+		vehicles = {
+			{vehicle = 'benson', modelo = 'benson'},
+			{vehicle = 'wrtrxmecdk', modelo = 'wrtrxmecdk'},
+			
 		}
 	},
 
