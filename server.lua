@@ -174,6 +174,17 @@ AddEventHandler("garage:garageTrySpawnVehicle", function(isPersonal, name, spawn
 
                 if garagesConfig.main['spawnClientVehicle'] then
                     if spawnLoc then
+
+                        print("Server - Identity: ",identity.registro)
+                        print("Server - Motor: ",query[1].motor)
+                        print("Server - Veiculo: ",query[1].veiculo)
+                        print("Server - Lataria: ",query[1].lataria)
+                        print("Server - Gasolina: ",query[1].gasolina)
+                        print("Server - Portas: ",query[1].doors)
+                        print("Server - Janelas: ",query[1].windows)
+                        print("Server - Pneus: ",query[1].tyres)
+
+
                         TriggerClientEvent("garage:clientSpawnVehicle", source, name, {
                             plate = identity.registro,
                             engine = query[1].motor or 1000,
@@ -627,9 +638,11 @@ end
 
 function DeleteVehicle(entityID)
     if DoesEntityExist(entityID) then
+        print("Veiculo chegou aqui para deletar!!!!!!")
         DeleteEntity(entityID)
     end
 end
+
 
 function syncDeleteVehicle(source, netID)
     local entity = NetworkGetEntityFromNetworkId(netID)
@@ -647,6 +660,11 @@ function syncDeleteVehicle(source, netID)
         DeleteEntity(entity)
     end
 end
+
+exports("DeleteVehicle",function (entityID)
+    DeleteVehicle(entityID)
+end)
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- CHECK PERMISSION
@@ -1158,6 +1176,7 @@ RegisterCommand(garagesConfig.main['commands'].prefix, function(source,args)
 
     end
 end)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- LIMPAR CACHES DE VEICULOS QUE NAO EXISTE / NAO USADOS
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1692,3 +1711,38 @@ end
 
 
 
+RegisterServerEvent("vSERVER.SaveVehicleStatus")
+AddEventHandler("vSERVER.SaveVehicleStatus", function(networkId, body, engine, fuel, tyres, windows, doors)
+    local source = source
+    local user_id = vRP.getUserId(source)
+
+    print("🚗 Salvando status do veículo para o usuário:", user_id)
+    print("📌 Network ID:", networkId)
+    print("🔧 Lataria:", body)
+    print("🔩 Motor:", engine)
+    print("⛽ Combustível:", fuel)
+    print("🛞 Pneus:", json.encode(tyres))
+    print("🪟 Janelas:", json.encode(windows))
+    print("🚪 Portas:", json.encode(doors))
+
+    -- Salvando no banco de dados
+    vRP.execute("vRP/updateVehicleInfos", {
+        lataria = body,
+        motor = engine,
+        gasolina = fuel,
+        tyres = json.encode(tyres),
+        windows = json.encode(windows),
+        doors = json.encode(doors),
+        user_id = user_id
+    })
+
+    -- Deletando o veículo no servidor
+    local vehicle = NetworkGetEntityFromNetworkId(networkId)
+
+    if DoesEntityExist(vehicle) then
+        DeleteEntity(vehicle)
+        print("✅ Veículo deletado no servidor.")
+    else
+        print("❌ Veículo não encontrado no servidor.")
+    end
+end)

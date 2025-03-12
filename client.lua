@@ -416,6 +416,10 @@ end
 -- EVENTS
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 RegisterNetEvent("garage:clientSpawnVehicle",function(name, info, isPersonal, spawnLoc)
+
+
+
+
     local mhash = GetHashKey(name)
     if not blockDuplicate[name] then
         blockDuplicate[name] = true
@@ -428,13 +432,25 @@ RegisterNetEvent("garage:clientSpawnVehicle",function(name, info, isPersonal, sp
         end
 
         if isPersonal or jacon then
+
+            
             if jacon then 
                 jacon = false
             end
             
             if spawnLoc then
                 local veh = CreateVehicle(mhash, spawnLoc.x,spawnLoc.y,spawnLoc.z,spawnLoc.w, true, true)
-                    
+                
+                print("Client - Identity: ",info.plate)
+                print("Client - Motor: ",info.engine)
+                print("Client - Veiculo: ",info.name)
+                print("Client - Lataria: ",info.body)
+                print("Client - Gasolina: ",info.fuel)
+                print("Client - Portas: ",info.doors)
+                print("Client - Janelas: ",info.windows)
+                print("Client - Pneus: ",info.tyres)
+
+
                 while not DoesEntityExist(veh) do
                     print("Entity nao encontrada")
                     Wait(200)
@@ -464,6 +480,7 @@ RegisterNetEvent("garage:clientSpawnVehicle",function(name, info, isPersonal, sp
                 SetVehicleDirtLevel(veh, 0.0)
                 SetVehicleDoorsLocked(veh, 2)
                 SetPedIntoVehicle(PlayerPedId(),veh,-1) --PERSONAGEM FICAR NO CARRO QUANDO SPAWNA
+                print("Motor 1: ",info.engine)
                 SetVehicleEngineHealth(veh, info.engine + 0.0)
                 SetVehicleBodyHealth(veh, info.body + 0.0)
                 SetVehicleFuelLevel(veh, info.fuel + 0.0)
@@ -544,6 +561,7 @@ RegisterNetEvent("garage:clientSpawnVehicle",function(name, info, isPersonal, sp
                 SetVehicleDirtLevel(veh, 0.0)
                 SetVehicleDoorsLocked(veh, 2)
                 SetPedIntoVehicle(PlayerPedId(),veh,-1) --PERSONAGEM FICAR NO CARRO QUANDO SPAWNA
+                print("Motor 2: ",info.engine)
                 SetVehicleEngineHealth(veh, info.engine + 0.0)
                 SetVehicleBodyHealth(veh, info.body + 0.0)
                 SetVehicleFuelLevel(veh, info.fuel + 0.0)

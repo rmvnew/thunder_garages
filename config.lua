@@ -1,7 +1,7 @@
 garagesConfig = {}
 
 garagesConfig.main = {
-	dir = "//177.54.148.31:4020/imgfusion/vehicles/v1//",
+	dir = "http://127.0.0.1:/ultimate/carros/",
 	spawnClientVehicle = true, -- Spawnar veiculo via client-side
 
 	clearVehicle = { -- LIMPAR VEICULOS QUE NÃO ESTEJAM USADOS
@@ -10,10 +10,10 @@ garagesConfig.main = {
 	},
 
 	ipvaVencimento = 20, -- DIAS PARA O VENCIMENTO DO IPVA
-	ipvaValue = 0.01, -- 5% VALOR  DO VEICULO IPVA
+	ipvaValue = 0.08, -- 5% VALOR  DO VEICULO IPVA
 
-	detidoValue = 0.1, -- 5% VALOR DO VEICULO DETIDO
-	retidoValue = 0.3, -- 10% VALOR DO VEICULO RETIDO 
+	detidoValue = 0.6, -- 5% VALOR DO VEICULO DETIDO
+	retidoValue = 0.4, -- 10% VALOR DO VEICULO RETIDO 
 
 	defaultCarPrice = 100000, -- Valor padrão caso o carro não seja encontrado na lista abaixo.
 	defaultCarChest = 50, -- Valor padrão caso o carro não seja encontrado na lista abaixo.
@@ -27,418 +27,147 @@ garagesConfig.main = {
 }
 
 garagesConfig.listCars = {
-	--[[TYPE = OUTROS]]-- 
+
+	--  COLOCAR NA CONCESSIONARIA
+	
+	
+	
 	[GetHashKey('veto2')] = { model = 'veto2', price = 900000, banned = false, name = 'Veto 2', trunk = 60, type = 'outros'},
 	[GetHashKey('caddy')] = { model = 'caddy', price = 900000, banned = false, name = 'Caddy', trunk = 60, type = 'outros'},
 	[GetHashKey('dominator6')] = { model = 'dominator6', price = 900000, banned = false, name = 'Dominator 6', trunk = 60, type = 'outros'},
 	[GetHashKey('openwheel2')] = { model = 'openwheel2', price = 900000, banned = false, name = 'Open Wheel', trunk = 60, type = 'outros'},
-	[GetHashKey('tractor')] = { model = 'tractor', price = 50000, banned = false, name = 'Tractor', trunk = 60, type = 'outros'},
-	[GetHashKey('imorgon')] = { model = 'imorgon', price = 900000, banned = false, name = 'Imorgon', trunk = 60, type = 'outros' },
 	[GetHashKey('issi7')] = { model = 'issi7', price = 400000, banned = false, name = 'Issi 7', trunk = 60, type = 'outros'},
 	[GetHashKey('locust')] = { model = 'locust', price = 2000000, banned = false, name = 'Ocelot', trunk = 60, type = 'outros' },
 	[GetHashKey('neo')] = { model = 'neo', price = 2000000, banned = false, name = 'Neo', trunk = 60, type = 'outros' },
-	[GetHashKey('penumbra2')] = { model = 'penumbra2', price = 600000, banned = false, name = 'Penumbra 2', trunk = 60, type = 'outros' },
-	[GetHashKey('revolter')] = { model = 'revolter', price = 200000, banned = false, name = 'Revolter', trunk = 60, type = 'outros' },
-	[GetHashKey('schafter2')] = { model = 'schafter2', price = 100000, banned = false, name = 'Schafter 2', trunk = 60, type = 'outros' },
-	[GetHashKey('blista')] = { model = 'blista', price = 90000, banned = false, name = 'Blista', trunk = 60, type = 'outros'},
-	[GetHashKey('paragon')] = { model = 'paragon', price = 800000, banned = false, name = 'Paragon', trunk = 60, type = 'outros' },
+	[GetHashKey('italirsx')] = { model = 'italirsx', price = 200000, banned = false, name = 'ItaliRSX', trunk = 60, type = 'outros' },
 	[GetHashKey('jugular')] = { model = 'jugular', price = 700000, banned = false, name = 'Jugular', trunk = 60, type = 'outros' },
 	[GetHashKey('komoda')] = { model = 'komoda', price = 850000, banned = false, name = 'Komoda', trunk = 60, type = 'outros' },
 	[GetHashKey('drafter')] = { model = 'drafter', price = 800000, banned = false, name = 'Drafter', trunk = 60, type = 'outros' },
-	[GetHashKey('club')] = { model = 'club', price = 800000, banned = false, name = 'Club', trunk = 60, type = 'outros' },
 	[GetHashKey('kanjo')] = { model = 'kanjo', price = 90000, banned = false, name = 'Kanjo', trunk = 60, type = 'outros'},
-	[GetHashKey('issi5')] = { model = 'issi5', price = 200000, banned = false, name = 'Issi 5', trunk = 60, type = 'outros' },
-	[GetHashKey('issi4')] = { model = 'issi4', price = 200000, banned = false,  name = 'Issi 4', trunk = 60, type = 'outros' },
-	[GetHashKey('panto')] = { model = 'panto', price = 5000, banned = false, name = 'Panto', trunk = 60, type = 'outros' },
-	[GetHashKey('italirsx')] = { model = 'italirsx', price = 200000, banned = false, name = 'ItaliRSX', trunk = 60, type = 'outros' },
 	[GetHashKey('vstr')] = { model = 'vstr', price = 200000, banned = false, name = 'Vstr', trunk = 60, type = 'outros' },
-	[GetHashKey('sultan2')] = { model = 'sultan2', price = 500000, banned = false, name = 'Sultan 2', trunk = 60, type = 'outros' },
 	[GetHashKey('dynasty')] = { model = 'dynasty', price = 200000, banned = false, name = 'Dynasty', trunk = 60, type = 'outros' },
-	[GetHashKey('manana2')] = { model = 'manana2', price = 300000, banned = false, name = 'Manana 2', trunk = 60, type = 'outros' },
-	[GetHashKey('peyote3')] = { model = 'peyote3', price = 300000, banned = false, name = 'Peyote 3', trunk = 60, type = 'outros' },
-	[GetHashKey('retinue2')] = { model = 'retinue2', price = 300000, banned = false, name = 'Retinue 2', trunk = 60, type = 'outros' },
-	[GetHashKey('savestra')] = { model = 'savestra', price = 400000, banned = false, name = 'Savestra', trunk = 60, type = 'outros' },
-	[GetHashKey('brioso')] = { model = 'brioso', price = 45000, banned = false, name = 'Brioso', trunk = 60, type = 'outros' },
-	[GetHashKey('brioso2')] = { model = "brioso2", price = 70000, banned = false, name = "Brioso 2", trunk = 60, type = 'outros' },
-	[GetHashKey('dilettante')] = { model = 'dilettante', price = 100000, banned = false, name = 'Dilettante', trunk = 60, type = 'outros' },
-	[GetHashKey('primo2')] = { model = 'primo2', price = 150000, banned = false, name = 'Primo2', trunk = 60, type = 'sedans' },
 	[GetHashKey('chino')] = { model = 'chino', price = 150000, banned = false, name = 'Chino', trunk = 60, type = 'outros' },
 	[GetHashKey('chino2')] = { model = 'chino2', price = 600000, banned = false, name = 'Chino2', trunk = 60, type = 'outros' },
-	[GetHashKey('coquette3')] = { model = 'coquette3', price = 200000, banned = false, name = 'Coquette3', trunk = 60, type = 'outros' },
 	[GetHashKey('dominator')] = { model = 'dominator', price = 200000, banned = false, name = 'Dominator', trunk = 60, type = 'outros' },
 	[GetHashKey('dominator2')] = { model = 'dominator2', price = 300000, banned = false, name = 'Dominator2', trunk = 60, type = 'outros' },
 	[GetHashKey('dukes')] = { model = 'dukes', price = 200000, banned = false, name = 'Dukes', trunk = 60, type = 'outros' },
 	[GetHashKey('faction')] = { model = 'faction', price = 140000, banned = false, name = 'Faction', trunk = 60, type = 'outros' },
 	[GetHashKey('faction2')] = { model = 'faction2', price = 500000, banned = false, name = 'Faction2', trunk = 60, type = 'outros' },
 	[GetHashKey('faction3')] = { model = 'faction3', price = 500000, banned = false, name = 'Faction3', trunk = 60, type = 'outros' },
-	[GetHashKey('gauntlet4')] = { model = 'gauntlet4', price = 200000, banned = false, name = 'Gauntlet 4', trunk = 60, type = 'outros' },
-	[GetHashKey('gauntlet3')] = { model = 'gauntlet3', price = 150000, banned = false, name = 'Gauntlet 3', trunk = 60, type = 'outros' },
-	[GetHashKey('gauntlet2')] = { model = 'gauntlet2', price = 400000, banned = false, name = 'Gauntlet2', trunk = 60, type = 'outros' },
-	[GetHashKey('hermes')] = { model = 'hermes', price = 200000, banned = false, name = 'Hermes', trunk = 60, type = 'outros' },
-	[GetHashKey('hotknife')] = { model = 'hotknife', price = 500000, banned = false, name = 'Hotknife', trunk = 60, type = 'outros' },
-	[GetHashKey('moonbeam')] = { model = 'moonbeam', price = 200000, banned = false, name = 'Moonbeam', trunk = 60, type = 'outros' },
-	[GetHashKey('moonbeam2')] = { model = 'moonbeam2', price = 5000000, banned = false, name = 'Moonbeam2', trunk = 60, type = 'outros' },
-	[GetHashKey('nightshade')] = { model = 'nightshade', price = 450000, banned = false, name = 'Nightshade', trunk = 60, type = 'outros' },
-	[GetHashKey('picador')] = { model = 'picador', price = 200000, banned = false, name = 'Picador', trunk = 60, type = 'outros' },
-	[GetHashKey('ruiner')] = { model = 'ruiner', price = 100000, banned = false, name = 'Ruiner', trunk = 60, type = 'outros' },
-	[GetHashKey('sabregt')] = { model = 'sabregt', price = 120000, banned = false, name = 'Sabregt', trunk = 60, type = 'outros' },
-	[GetHashKey('sabregt2')] = { model = 'sabregt2', price = 150000, banned = false, name = 'Sabregt2', trunk = 60, type = 'outros' },
-	[GetHashKey('stalion')] = { model = 'stalion', price = 400000, banned = false, name = 'Stalion', trunk = 60, type = 'outros' },
-	[GetHashKey('stalion2')] = { model = 'stalion2', price = 260000, banned = false, name = 'Stalion2', trunk = 60, type = 'outros' },
-	[GetHashKey('tampa')] = { model = 'tampa', price = 200000, banned = false, name = 'Tampa', trunk = 60, type = 'outros' },
-	[GetHashKey('vigero')] = { model = 'vigero', price = 170000, banned = false, name = 'Vigero', trunk = 60, type = 'outros' },
-	[GetHashKey('virgo')] = { model = 'virgo', price = 150000, banned = false, name = 'Virgo', trunk = 60, type = 'outros' },
-	[GetHashKey('virgo2')] = { model = 'virgo2', price = 150000, banned = false, name = 'Virgo2', trunk = 60, type = 'outros' },
-	[GetHashKey('virgo3')] = { model = 'virgo3', price = 150000, banned = false, name = 'Virgo3', trunk = 60, type = 'outros' },
-	[GetHashKey('voodoo')] = { model = 'voodoo', price = 300000, banned = false, name = 'Voodoo', trunk = 60, type = 'outros' },
-	[GetHashKey('voodoo2')] = { model = 'voodoo2', price = 100000, banned = false, name = 'Voodoo2', trunk = 60, type = 'outros' },
-	[GetHashKey('yosemite')] = { model = 'yosemite', price = 800000, banned = false, name = 'Yosemite', trunk = 60, type = 'outros' },
-	[GetHashKey('yosemite3')] = { model = 'yosemite3', price = 200000, banned = false, name = 'Yosemite 3', trunk = 60, type = 'outros' },
 	[GetHashKey('dloader')] = { model = 'dloader', price = 150000, banned = false, name = 'Dloader', trunk = 60, type = 'outros' },
-	[GetHashKey('brawler')] = { model = 'brawler', price = 4000000, banned = false, name = 'Brawler', trunk = 60, type = 'outros' },
-	[GetHashKey('sandking2')] = { model = 'sandking2', price = 2500000, banned = false, name = 'Sandking2', trunk = 60, type = 'outros' },
-	-- [GetHashKey('viseris')] = { model = 'viseris', price = 600000, banned = false, name = 'Viseris', trunk = 30, type = 'outros' },
-	[GetHashKey('xls2')] = { model = 'xls2', price = 350000, banned = false, name = 'Xls2', trunk = 60, type = 'outros' },
+	[GetHashKey('viseris')] = { model = 'viseris', price = 600000, banned = false, name = 'Viseris', trunk = 30, type = 'outros' },
 	[GetHashKey('squaddie')] = { model = 'squaddie', price = 350000, banned = false, name = 'squaddie', trunk = 60, type = 'outros' },
 	[GetHashKey('cog552')] = { model = 'cog552', price = 200000, banned = false, name = 'Cog552', trunk = 60, type = 'outros' },
-	[GetHashKey('cognoscenti')] = { model = 'cognoscenti', price = 190000, banned = false, name = 'Cognoscenti', trunk = 60, type = 'outros' },
-	[GetHashKey('cognoscenti2')] = { model = 'cognoscenti2', price = 200000, banned = false, name = 'Cognoscenti2', trunk = 60, type = 'outros' },
-	[GetHashKey('alpha')] = { model = 'alpha', price = 200000, banned = false, name = 'Alpha', trunk = 60, type = 'outros' },
-	[GetHashKey('banshee')] = { model = 'banshee', price = 300000, banned = false, name = 'Banshee', trunk = 60, type = 'outros' },
-	[GetHashKey('bestiagts')] = { model = 'bestiagts', price = 400000, banned = false, name = 'Bestiagts', trunk = 60, type = 'outros' },
-	[GetHashKey('blista2')] = { model = 'blista2', price = 100000, banned = false, name = 'Blista2', trunk = 60, type = 'outros' },
-	[GetHashKey('blista3')] = { model = 'blista3', price = 200000, banned = false, name = 'Blista3', trunk = 60, type = 'outros' },
-	[GetHashKey('buffalo')] = { model = 'buffalo', price = 450000, banned = false, name = 'Buffalo', trunk = 60, type = 'outros' },
-	[GetHashKey('buffalo2')] = { model = 'buffalo2', price = 450000, banned = false, name = 'Buffalo2', trunk = 60, type = 'outros' },
-	[GetHashKey('buffalo3')] = { model = 'buffalo3', price = 400000, banned = false, name = 'Buffalo3', trunk = 60, type = 'outros' },
 	[GetHashKey('carbonizzare')] = { model = 'carbonizzare', price = 200000, banned = false, name = 'Carbonizzare', trunk = 60, type = 'outros' },
-	[GetHashKey('comet2')] = { model = 'comet2', price = 400000, banned = false, name = 'Comet2', trunk = 60, type = 'outros' },
-	[GetHashKey('comet3')] = { model = 'comet3', price = 500000, banned = false, name = 'Comet3', trunk = 60, type = 'outros' },
-	[GetHashKey('comet5')] = { model = 'comet5', price = 1250000, banned = false, name = 'Comet5', trunk = 60, type = 'outros' },
 	[GetHashKey('coquette')] = { model = 'coquette', price = 500000, banned = false, name = 'Coquette', trunk = 60, type = 'outros' },
 	[GetHashKey('coquette4')] = { model = 'coquette4', price = 8000000, banned = false, name = 'Coquette 4', trunk = 60, type = 'outros' },
-	[GetHashKey('elegy')] = { model = 'elegy', price = 500000, banned = false, name = 'Elegy', trunk = 60, type = 'outros' },
-	[GetHashKey('elegy2')] = { model = 'elegy2', price = 400000, banned = false, name = 'Elegy2', trunk = 60, type = 'outros' },
 	[GetHashKey('feltzer2')] = { model = 'feltzer2', price = 200000, banned = false, name = 'Feltzer2', trunk = 60, type = 'outros' },
-	[GetHashKey('furoregt')] = { model = 'furoregt', price = 200000, banned = false, name = 'Furoregt', trunk = 60, type = 'outros' },
-	[GetHashKey('fusilade')] = { model = 'fusilade', price = 200000, banned = false, name = 'Fusilade', trunk = 60, type = 'outros' },
-	[GetHashKey('futo')] = { model = 'futo', price = 150000, banned = false, name = 'Futo', trunk = 60, type = 'outros' },
-	[GetHashKey('jester')] = { model = 'jester', price = 5000000, banned = false, name = 'Jester', trunk = 60, type = 'outros' },
-	[GetHashKey('khamelion')] = { model = 'khamelion', price = 200000, banned = false, name = 'Khamelion', trunk = 60, type = 'outros' },
-	[GetHashKey('kuruma')] = { model = 'kuruma', price = 7500000, banned = false, name = 'Kuruma', trunk = 60, type = 'outros' },
-	[GetHashKey('massacro')] = { model = 'massacro', price = 750000, banned = false, name = 'Massacro', trunk = 60, type = 'outros' },
-	[GetHashKey('massacro2')] = { model = 'massacro2', price = 200000, banned = false, name = 'Massacro2', trunk = 60, type = 'outros' },
-	[GetHashKey('ninef')] = { model = 'ninef', price = 950000, banned = false, name = 'Ninef', trunk = 60, type = 'outros' },
-	[GetHashKey('ninef2')] = { model = 'ninef2', price = 950000, banned = false, name = 'Ninef2', trunk = 60, type = 'outros' },
-	[GetHashKey('omnis')] = { model = 'omnis', price = 200000, banned = false, name = 'Omnis', trunk = 60, type = 'outros' },
-	[GetHashKey('pariah')] = { model = 'pariah', price = 950000, banned = false, name = 'Pariah', trunk = 60, type = 'outros' },
 	[GetHashKey('penumbra')] = { model = 'penumbra', price = 800000, banned = false, name = 'Penumbra', trunk = 60, type = 'outros' },
 	[GetHashKey('raiden')] = { model = 'raiden', price = 850000, banned = false, name = 'Raiden', trunk = 60, type = 'outros' },
-	[GetHashKey('rapidgt')] = { model = 'rapidgt', price = 800000, banned = false, name = 'Rapidgt', trunk = 60, type = 'outros' },
-	[GetHashKey('rapidgt2')] = { model = 'rapidgt2', price = 200000, banned = false, name = 'Rapidgt2', trunk = 60, type = 'outros' },
 	[GetHashKey('ruston')] = { model = 'ruston', price = 3000000, banned = false, name = 'Ruston', trunk = 60, type = 'outros' },
-	[GetHashKey('schafter3')] = { model = 'schafter3', price = 300000, banned = false, name = 'Schafter3', trunk = 60, type = 'outros' },
-	[GetHashKey('schafter4')] = { model = 'schafter4', price = 250000, banned = false, name = 'Schafter4', trunk = 60, type = 'outros' },
-	[GetHashKey('schafter5')] = { model = 'schafter5', price = 175000, banned = false, name = 'Schafter5', trunk = 60, type = 'outros' },
-	[GetHashKey('schwarzer')] = { model = 'schwarzer', price = 250000, banned = false, name = 'Schwarzer', trunk = 60, type = 'outros' },
-	[GetHashKey('sentinel3')] = { model = 'sentinel3', price = 200000, banned = false, name = 'Sentinel3', trunk = 60, type = 'outros' },
-	[GetHashKey('seven70')] = { model = 'seven70', price = 200000, banned = false, name = 'Seven70', trunk = 60, type = 'outros' },
-	[GetHashKey('specter')] = { model = 'specter', price = 2000000, banned = false, name = 'Specter', trunk = 60, type = 'outros' },
-	[GetHashKey('specter2')] = { model = 'specter2', price = 900000, banned = false, name = 'Specter2', trunk = 60, type = 'outros' },
-	[GetHashKey('streiter')] = { model = 'streiter', price = 600000, banned = false, name = 'Streiter', trunk = 60, type = 'outros' },
 	[GetHashKey('sultan')] = { model = 'sultan', price = 800000, banned = false, name = 'Sultan', trunk = 60, type = 'outros' },
-	[GetHashKey('surano')] = { model = 'surano', price = 200000, banned = false, name = 'Surano', trunk = 60, type = 'outros' },
-	[GetHashKey('tampa2')] = { model = 'tampa2', price = 300000, banned = false, name = 'Tampa2', trunk = 60, type = 'outros' },
-	[GetHashKey('tropos')] = { model = 'tropos', price = 450000, banned = false, name = 'Tropos', trunk = 60, type = 'outros' },
-	[GetHashKey('verlierer2')] = { model = 'verlierer2', price = 350000, banned = false, name = 'Verlierer2', trunk = 60, type = 'outros' },
-	[GetHashKey('btype')] = { model = 'btype', price = 200000, banned = false, name = 'Btype', trunk = 60, type = 'outros' },
-	[GetHashKey('btype2')] = { model = 'btype2', price = 200000, banned = false, name = 'Btype2', trunk = 60, type = 'outros' },
-	[GetHashKey('btype3')] = { model = 'btype3', price = 200000, banned = false, name = 'Btype3', trunk = 60, type = 'outros' },
 	[GetHashKey('casco')] = { model = 'casco', price = 500000, banned = false, name = 'Casco', trunk = 60, type = 'outros' },
-	[GetHashKey('cheetah')] = { model = 'cheetah', price = 200000, banned = false, name = 'Cheetah', trunk = 60, type = 'imports' },
-	[GetHashKey('coquette2')] = { model = 'coquette2', price = 400000, banned = false, name = 'Coquette2', trunk = 60, type = 'outros' },
 	[GetHashKey('feltzer3')] = { model = 'feltzer3', price = 390000, banned = false, name = 'Feltzer3', trunk = 60, type = 'outros' },
 	[GetHashKey('gt500')] = { model = 'gt500', price = 600000, banned = false, name = 'GT500', trunk = 60, type = 'outros' },
-	[GetHashKey('infernus2')] = { model = 'infernus2', price = 200000, banned = false, name = 'Infernus2', trunk = 60, type = 'outros' },
-	[GetHashKey('jb700')] = { model = 'jb700', price = 250000, banned = false, name = 'Jb700', trunk = 60, type = 'outros' },
-	[GetHashKey('mamba')] = { model = 'mamba', price = 400000, banned = false, name = 'Mamba', trunk = 60, type = 'outros' },
-	[GetHashKey('manana')] = { model = 'manana', price = 75000, banned = false, name = 'Manana', trunk = 60, type = 'outros' },
 	[GetHashKey('monroe')] = { model = 'monroe', price = 400000, banned = false, name = 'Monroe', trunk = 60, type = 'outros' },
 	[GetHashKey('peyote')] = { model = 'peyote', price = 80000, banned = false, name = 'Peyote', trunk = 60, type = 'outros' },
 	[GetHashKey('pigalle')] = { model = 'pigalle', price = 80000, banned = false, name = 'Pigalle', trunk = 60, type = 'outros' },
-	[GetHashKey('rapidgt3')] = { model = 'rapidgt3', price = 650000, banned = false, name = 'Rapidgt3', trunk = 60, type = 'outros' },
 	[GetHashKey('retinue')] = { model = 'retinue', price = 200000, banned = false, name = 'Retinue', trunk = 60, type = 'outros' },
-	[GetHashKey('stinger')] = { model = 'stinger', price = 450000, banned = false, name = 'Stinger', trunk = 60, type = 'outros' },
-	[GetHashKey('stingergt')] = { model = 'stingergt', price = 400000, banned = false, name = 'Stingergt', trunk = 60, type = 'outros' },
-	[GetHashKey('torero')] = { model = 'torero', price = 300000, banned = false, name = 'Torero', trunk = 60, type = 'outros' },
-	[GetHashKey('tornado')] = { model = 'tornado', price = 100000, banned = false, name = 'Tornado', trunk = 60, type = 'outros' },
-	[GetHashKey('tornado2')] = { model = 'tornado2', price = 300000, banned = false, name = 'Tornado2', trunk = 60, type = 'outros' },
-	[GetHashKey('tornado5')] = { model = 'tornado5', price = 500000, banned = false, name = 'Tornado5', trunk = 60, type = 'outros' },
-	[GetHashKey('tornado6')] = { model = 'tornado6', price = 800000, banned = false, name = 'Tornado6', trunk = 60, type = 'outros' },
-	[GetHashKey('turismo2')] = { model = 'turismo2', price = 200000, banned = false, name = 'Turismo2', trunk = 60, type = 'outros' },
-	[GetHashKey('ztype')] = { model = 'ztype', price = 200000, banned = false, name = 'Ztype', trunk = 60, type = 'outros' },
-	[GetHashKey('adder')] = { model = 'adder', price = 700000, banned = false, name = 'Adder', trunk = 60, type = 'outros' },
-	[GetHashKey('cheetah2')] = { model = 'cheetah2', price = 200000, banned = false, name = 'Cheetah2', trunk = 2600, type = 'outros' },
 	[GetHashKey('bison')] = { model = 'bison', price = 200000, banned = false, name = 'Bison', trunk = 60, type = 'outros' },
 	[GetHashKey('bison2')] = { model = 'bison2', price = 200000, banned = false, name = 'Bison2', trunk = 60, type = 'outros' },
-	[GetHashKey('bobcatxl')] = { model = 'bobcatxl', price = 650000, banned = false, name = 'Bobcatxl', trunk = 60, type = 'outros' },
-	[GetHashKey('burrito')] = { model = 'burrito', price = 2000000, banned = false, name = 'Burrito', trunk = 60, type = 'outros' },
-	[GetHashKey('burrito2')] = { model = 'burrito2', price = 3000000, banned = false, name = 'Burrito2', trunk = 60, type = 'outros' },
-	[GetHashKey('burrito3')] = { model = 'burrito3', price = 4000000, banned = false, name = 'Burrito3', trunk = 60, type = 'outros' },
-	[GetHashKey('burrito4')] = { model = 'burrito4', price = 5000000, banned = false, name = 'Burrito4', trunk = 60, type = 'outros' },
-	[GetHashKey('minivan')] = { model = 'minivan', price = 800000, banned = false, name = 'Minivan', trunk = 60, type = 'outros' },
-	[GetHashKey('minivan2')] = { model = 'minivan2', price = 5000000, banned = false, name = 'Minivan2', trunk = 60, type = 'outros' },
-	[GetHashKey('paradise')] = { model = 'paradise', price = 200000, banned = false, name = 'Paradise', trunk = 60, type = 'outros' },
-	[GetHashKey('pony')] = { model = 'pony', price = 160000, banned = false, name = 'Pony', trunk = 60, type = 'outros' },
-	[GetHashKey('pony2')] = { model = 'pony2', price = 2000000, banned = false, name = 'Pony2', trunk = 60, type = 'outros' },
-	[GetHashKey('surfer')] = { model = 'surfer', price = 500000, banned = false, name = 'Surfer', trunk = 60, type = 'outros' },
 	[GetHashKey('cheburek')] = { model = 'cheburek', price = 230000, banned = false, name = 'Cheburek', trunk = 60, type = 'outros' },
-	[GetHashKey('hotring')] = { model = 'hotring', price = 500000, banned = false, name = 'Hotring', trunk = 60, type = 'outros' },
-	[GetHashKey('jester3')] = { model = 'jester3', price = 200000, banned = false, name = 'Jester3', trunk = 60, type = 'outros' },
-	[GetHashKey('flashgt')] = { model = 'flashgt', price = 700000, banned = false, name = 'Flashgt', trunk = 60, type = 'outros' },
-	[GetHashKey('ellie')] = { model = 'ellie', price = 400000, banned = false, name = 'Ellie', trunk = 60, type = 'outros' },
-	[GetHashKey('michelli')] = { model = 'michelli', price = 200000, banned = false, name = 'Michelli', trunk = 60, type = 'outros' },
 	[GetHashKey('fagaloa')] = { model = 'fagaloa', price = 100000, banned = false, name = 'Fagaloa', trunk = 60, type = 'outros' },
 	[GetHashKey('dominator3')] = { model = 'dominator3', price = 400000, banned = false, name = 'Dominator3', trunk = 60, type = 'outros' },
-	[GetHashKey('issi3')] = { model = 'issi3', price = 100000, banned = false, name = 'Issi3', trunk = 60, type = 'outros' },
-	[GetHashKey('gb200')] = { model = 'gb200', price = 500000, banned = false, name = 'Gb200', trunk = 60, type = 'outros' },
 	[GetHashKey('neon')] = { model = 'neon', price = 2000000, banned = false, name = 'Neon', trunk = 60, type = 'outros' },
-	[GetHashKey('tezeract')] = { model = 'tezeract', price = 7000000, banned = false, name = 'Tezeract', trunk = 60, type = 'outros' },
-	[GetHashKey('swinger')] = { model = 'swinger', price = 550000, banned = false, name = 'Swinger', trunk = 60, type = 'outros' },
-	[GetHashKey('clique')] = { model = 'clique', price = 200000, banned = false, name = 'Clique', trunk = 60, type = 'outros' },
-	[GetHashKey('deveste')] = { model = 'deveste', price = 2000000, banned = false, name = 'Deveste', trunk = 60, type = 'outros' },
-	[GetHashKey('deviant')] = { model = 'deviant', price = 200000, banned = false, name = 'Deviant', trunk = 60, type = 'outros' },
-	[GetHashKey('impaler')] = { model = 'impaler', price = 1300000, banned = false, name = 'Impaler', trunk = 60, type = 'outros' },
-	[GetHashKey('italigto')] = { model = 'italigto', price = 5000000, banned = false, name = 'Italigto', trunk = 60, type = 'outros' },
-	[GetHashKey('schlagen')] = { model = 'schlagen', price = 500000, banned = false, name = 'Schlagen', trunk = 60, type = 'outros' },
 	[GetHashKey('tulip')] = { model = 'tulip', price = 850000, banned = false, name = 'Tulip', trunk = 60, type = 'outros' },
-	[GetHashKey('vamos')] = { model = 'vamos', price = 900000, banned = false, name = 'Vamos', trunk = 60, type = 'outros' },
 	[GetHashKey('lurcher')] = { model = 'lurcher', price = 200000, banned = false, name = 'Lurcher', trunk = 60, type = 'outros' },
-	[GetHashKey('lynx')] = { model = 'lynx', price = 800000, banned = false, name = 'Lynx', trunk = 60, type = 'outros' },
-	[GetHashKey('raptor')] = { model = 'raptor', price = 200000, banned = false, name = 'Raptor', trunk = 60, type = 'outros' },
 	[GetHashKey('z190')] = { model = 'z190', price = 400000, banned = false, name = 'Z190', trunk = 60, type = 'outros' },
-	[GetHashKey('nightblade')] = { model = 'nightblade', price = 800000, banned = false, name = 'Nightblade', trunk = 60, type = 'outros' },
-	[GetHashKey('rumpo')] = { model = 'rumpo', price = 200000, banned = false, name = 'Rumpo', trunk = 60, type = 'outros' },
-	[GetHashKey('rumpo2')] = { model = 'rumpo2', price = 160000, banned = false, name = 'Rumpo2', trunk = 60, type = 'outros' },
-	[GetHashKey('youga')] = { model = 'youga', price = 200000, banned = false, name = 'Youga', trunk = 60, type = 'outros' },
-	
-	
-	
-
-	--[[TYPE = SEDANS]]-- 
-	[GetHashKey('intruder')] = { model = 'intruder', price = 90000, banned = false, name = 'Intruder', trunk = 60, type = 'sedans' },
+	[GetHashKey('youga')] = { model = 'youga', price = 200000, banned = false, name = 'Youga', trunk = 100, type = 'outros' },
     [GetHashKey('exemplar')] = { model = 'exemplar', price = 250000, banned = false, name = 'Exemplar', trunk = 60, type = 'sedans' },
     [GetHashKey('f620')] = { model = 'f620', price = 160000, banned = false, name = 'F620', trunk = 60, type = 'sedans' },
-    [GetHashKey('felon')] = { model = 'felon', price = 300000, banned = false, name = 'Felon', trunk = 60, type = 'sedans' },
-    [GetHashKey('ingot')] = { model = 'ingot', price = 100000, banned = false, name = 'Ingot', trunk = 60, type = 'sedans' },
-    [GetHashKey('jackal')] = { model = 'jackal', price = 200000, banned = false, name = 'Jackal', trunk = 60, type = 'sedans' },
-    [GetHashKey('oracle')] = { model = 'oracle', price = 120000, banned = false, name = 'Oracle', trunk = 60, type = 'sedans' },
-    [GetHashKey('oracle2')] = { model = 'oracle2', price = 150000, banned = false, name = 'Oracle2', trunk = 60, type = 'sedans' },
     [GetHashKey('sentinel')] = { model = 'sentinel', price = 140000, banned = false, name = 'Sentinel', trunk = 60, type = 'sedans' },
-    [GetHashKey('sentinel2')] = { model = 'sentinel2', price = 130000, banned = false, name = 'Sentinel2', trunk = 60, type = 'sedans' },
-    [GetHashKey('windsor')] = { model = 'windsor', price = 220000, banned = false, name = 'Windsor', trunk = 60, type = 'sedans' },
-    [GetHashKey('windsor2')] = { model = 'windsor2', price = 170000, banned = false, name = 'Windsor2', trunk = 60, type = 'sedans' },
-    [GetHashKey('zion')] = { model = 'zion', price = 150000, banned = false, name = 'Zion', trunk = 60, type = 'sedans' },
-    [GetHashKey('zion2')] = { model = 'zion2', price = 300000, banned = false, name = 'Zion2', trunk = 60, type = 'sedans' },
     [GetHashKey('blade')] = { model = 'blade', price = 150000, banned = false, name = 'Blade', trunk = 60, type = 'sedans' },
-    [GetHashKey('buccaneer')] = { model = 'buccaneer', price = 200000, banned = false, name = 'Buccaneer', trunk = 60, type = 'sedans' },
-    [GetHashKey('buccaneer2')] = { model = 'buccaneer2', price = 500000, banned = false, name = 'Buccaneer2', trunk = 60, type = 'sedans' },
-    [GetHashKey('primo')] = { model = 'primo', price = 130000, banned = false, name = 'Primo', trunk = 60, type = 'sedans' },
-	[GetHashKey('issi2')] = { model = 'issi2', price = 200000, banned = false, name = 'Issi2', trunk = 60, type = 'sedans' },
-    [GetHashKey('prairie')] = { model = 'prairie', price = 80000, banned = false, name = 'Prairie', trunk = 60, type = 'sedans' },
-    [GetHashKey('rhapsody')] = { model = 'rhapsody', price = 10000, banned = false, name = 'Rhapsody', trunk = 60, type = 'sedans' },
-    [GetHashKey('cogcabrio')] = { model = 'cogcabrio', price = 220000, banned = false, name = 'Cogcabrio', trunk = 60, type = 'sedans' },
     [GetHashKey('emperor')] = { model = 'emperor', price = 70000, banned = false, name = 'Emperor', trunk = 60, type = 'sedans' },
     [GetHashKey('emperor2')] = { model = 'emperor2', price = 100000, banned = false, name = 'Emperor 2', trunk = 60, type = 'sedans' },
-	[GetHashKey('emperor3')] = { model = 'emperor3', price = 100000, banned = false, name = 'Emperor 3', trunk = 60, type = 'sedans' },
-    [GetHashKey('phoenix')] = { model = 'phoenix', price = 160000, banned = false, name = 'Phoenix', trunk = 60, type = 'sedans' },
-    [GetHashKey('premier')] = { model = 'premier', price = 150000, banned = false, name = 'Premier', trunk = 60, type = 'sedans' },
-    [GetHashKey('glendale')] = { model = 'glendale', price = 80000, banned = false, name = 'Glendale', trunk = 60, type = 'sedans' }, 
-	[GetHashKey('glendale2')] = { model = 'glendale2', price = 250000, banned = false, name = 'Glendale 2', trunk = 60, type = 'sedans' },
-	[GetHashKey('regina')] = { model = 'regina', price = 200000, banned = false,  name = 'Regina', trunk = 60, type = 'sedans' },
-	[GetHashKey('romero')] = { model = 'romero', price = 500000, banned = false, name = 'Funerário', trunk = 60, type = 'sedans' },
-	[GetHashKey('superd')] = { model = 'superd', price = 500000, banned = false, name = 'superd', trunk = 60, type = 'sedans' },
-	[GetHashKey('stretch')] = { model = 'stretch', price = 200000, banned = false, name = 'Limousine', trunk = 60, type = 'sedans' },
 	[GetHashKey('asea')] = { model = 'asea', price = 100000, banned = false, name = 'Asea', trunk = 60, type = 'sedans' },
 	[GetHashKey('asea2')] = { model = 'asea2', price = 100000, banned = false, name = 'Asea2', trunk = 60, type = 'sedans' },
 	[GetHashKey('asterope')] = { model = 'asterope', price = 150000, banned = false, name = 'Asterope', trunk = 60, type = 'sedans' },
+	
+	
+
+
 	[GetHashKey('cog55')] = { model = 'cog55', price = 200000, banned = false, name = 'Cog55', trunk = 60, type = 'sedans' },
-	[GetHashKey('stanier')] = { model = 'stanier', price = 130000, banned = false, name = 'Stanier', trunk = 60, type = 'sedans' },
-	[GetHashKey('stratum')] = { model = 'stratum', price = 100000, banned = false, name = 'Stratum', trunk = 60, type = 'sedans' },
-	[GetHashKey('importsd')] = { model = 'importsd', price = 150000, banned = false, name = 'importsd', trunk = 60, type = 'sedans' },
-	[GetHashKey('surge')] = { model = 'surge', price = 220000, banned = false, name = 'Surge', trunk = 60, type = 'sedans' },
-	[GetHashKey('tailgater')] = { model = 'tailgater', price = 160000, banned = false, name = 'Tailgater', trunk = 60, type = 'sedans' },
-	[GetHashKey('tailgater2')] = { model = 'tailgater2', price = 160000, banned = false, name = 'tailgater2', trunk = 60, type = 'sedans' },
-	[GetHashKey('warrener')] = { model = 'warrener', price = 100000, banned = false, name = 'Warrener', trunk = 60, type = 'sedans' },
-	[GetHashKey('washington')] = { model = 'washington', price = 150000, banned = false, name = 'Washington', trunk = 60, type = 'sedans' },
-	[GetHashKey('fugitive')] = { model = 'fugitive', price = 190000, banned = false, name = 'Fugitive', trunk = 60, type = 'sedans' },
-	[GetHashKey('stafford')] = { model = 'stafford', price = 200000, banned = false, name = 'Stafford', trunk = 60, type = 'sedans' },
 	[GetHashKey('sugoi')] = { model = 'sugoi', price = 200000, banned = false, name = 'Sugoi', trunk = 60, type = 'sedans' },
 	[GetHashKey('fiatstilo')] = { model = 'fiatstilo', price = 200000, banned = false, name = 'Fiat Stilo', trunk = 60, type = 'sedans' },
-	[GetHashKey('limo2')] = { model = 'limo2', price = 200000, banned = false, name = 'limo2', trunk = 60, type = 'sedans' },
-	[GetHashKey('pounder')] = { model = 'pounder', price = 200000, banned = false, name = 'pounder', trunk = 300, type = 'vip' }, --pounder2
-	[GetHashKey('pounder2')] = { model = 'pounder2', price = 200000, banned = false, name = 'pounder2', trunk = 300, type = 'vip' }, --pounder2
 
-------------------------------------------------------------------------------------------------------------------------------------------------------
 
-	--[[VEÍCULOS EMPREGOS SERVICE]]--
+	
 	--barcos service
+
 	[GetHashKey('dinghy')] = { model = 'dinghy', price = 200000, banned = false, name = 'Dinghy', trunk = nil, type = 'service' },
 	[GetHashKey('dinghy2')] = { model = 'dinghy2', price = 200000, banned = false, name = 'Dinghy 2', trunk = nil, type = 'service' },
 	[GetHashKey('dinghy3')] = { model = 'dinghy3', price = 200000, banned = false, name = 'Dinghy 3', trunk = nil, type = 'service' },
 	[GetHashKey('dinghy4')] = { model = 'dinghy4', price = 200000, banned = false, name = 'Dinghy 4', trunk = nil, type = 'service' },
-	---outros service
-	[GetHashKey('speedo')] = { model = 'speedo', price = 500000, banned = false, name = 'Speedo', trunk = 60, type = 'service' },
-	[GetHashKey('tractor2')] = { model = 'tractor2', price = 160000, banned = false, name = 'Tractor2', trunk = 60, type = 'service' },
+
+	--------------------------------------------------------------
+	
+	--Serviços
+	
 	[GetHashKey('bus')] = { model = 'bus', price = 200000, banned = false, name = 'Ônibus', trunk = 0, type = 'service' },
 	[GetHashKey('benson')] = { model = 'benson', price = 200000, banned = false, name = 'benson', trunk = 1500, type = 'vip' },
-	[GetHashKey('amarokfac')] = { model = 'amarokfac', price = 200000, banned = false, name = 'amarokfac', trunk = 200, type = 'service' },
-	[GetHashKey('hondacgfac')] = { model = 'hondacgfac', price = 200000, banned = false, name = 'hondacgfac', trunk = 120, type = 'service' },
-	[GetHashKey('mule')] = { model = 'mule', price = 500000, banned = false, name = 'Mule', trunk = 700, type = 'service' },
-	[GetHashKey('brickade')] = { model = 'brickade', price = 500000, banned = false, name = 'brickade', trunk = 3000, type = 'service' },
-	[GetHashKey('boxville3')] = { model = 'boxville3', price = 500000, banned = false, name = 'boxville3', trunk = 700, type = 'service' },
-
-
-	[GetHashKey('trash2')] = { model = 'trash2', price = 200000, banned = false, name = 'Caminhão', trunk = 60, type = 'service' }, --lixeiro
-	[GetHashKey('tiptruck')] = { model = 'tiptruck', price = 200000, banned = false, name = 'Tiptruck', trunk = 60, type = 'service' }, --minerador
+	[GetHashKey('amarokfac')] = { model = 'amarokfac', price = 200000, banned = false, name = 'amarokfac', trunk = 200, type = 'vip' },
+	[GetHashKey('hondacgfac')] = { model = 'hondacgfac', price = 200000, banned = false, name = 'hondacgfac', trunk = 120, type = 'vip' },
+	[GetHashKey('mule')] = { model = 'mule', price = 500000, banned = false, name = 'Mule', trunk = 700, type = 'vip' },
+	[GetHashKey('brickade')] = { model = 'brickade', price = 500000, banned = false, name = 'brickade', trunk = 3000, type = 'vip' },
+	[GetHashKey('boxville3')] = { model = 'boxville3', price = 500000, banned = false, name = 'boxville3', trunk = 700, type = 'work' },
 	
-	----BICICLETAS SPAWN
+	--------------------------------------------------------------
+	
 	[GetHashKey('scorcher')] = { model = 'scorcher', price = 200000, banned = false, name = 'Scorcher', trunk = 0, type = 'service' },
-	[GetHashKey('tribike')] = { model = 'tribike', price = 200000, banned = false, name = 'Tribike', trunk = 0, type = 'service' },
-	[GetHashKey('tribike2')] = { model = 'tribike2', price = 200000, banned = false, name = 'Tribike2', trunk = 0, type = 'service' },
-	[GetHashKey('tribike3')] = { model = 'tribike3', price = 200000, banned = false, name = 'Tribike3', trunk = 0, type = 'service' },
 	[GetHashKey('fixter')] = { model = 'fixter', price = 200000, banned = false, name = 'Fixter', trunk = 0, type = 'service' },
 	[GetHashKey('cruiser')] = { model = 'cruiser', price = 200000, banned = false, name = 'Cruiser', trunk = 0, type = 'service' },
-	[GetHashKey('bmx')] = { model = 'bmx', price = 20000, banned = false, name = 'Bmx', trunk = 0, type = 'service' },
-
-	
-	------------------------------------------------------------------------------------------------------------------------------------------------------
-	--IMPORTADOS 
-	[GetHashKey('furia')] = { model = 'furia', price = 2000000, banned = false, name = 'Furia', trunk = 100, type = 'imports' },
 	[GetHashKey('krieger')] = { model = 'krieger', price = 4000000, banned = false, name = 'Krieger', trunk = 100, type = 'imports', },
-	[GetHashKey('emerus')] = { model = 'emerus', price = 2000000, banned = false, name = 'Emerus', trunk = 100, type = 'imports' },
-	[GetHashKey('zorrusso')] = { model = 'zorrusso', price = 3500000, banned = false, name = 'Zorrusso', trunk = 100, type = 'imports'  },
-	[GetHashKey('thrax')] = { model = 'thrax', price = 5000000, banned = false, name = 'Thrax', trunk = 100, type = 'imports' },
-	[GetHashKey('s80')] = { model = 's80', price = 2000000, banned = false, name = 'S80', trunk = 100, type = 'imports' },
 	[GetHashKey('tigon')] = { model = 'tigon', price = 2000000, banned = false, name = 'Tigon', trunk = 100, type = 'imports' },
-	[GetHashKey('autarch')] = { model = 'autarch', price = 3000000, banned = false, name = 'Autarch', trunk = 100, type = 'imports' },
-	[GetHashKey('banshee2')] = { model = 'banshee2', price = 700000, banned = false, name = 'Banshee2', trunk = 100, type = 'imports' },
-	[GetHashKey('bullet')] = { model = 'bullet', price = 800000, banned = false, name = 'Bullet', trunk = 100, type = 'imports' },
-	[GetHashKey('entityxf')] = { model = 'entityxf', price = 2000000, banned = false, name = 'Entityxf', trunk = 100, type = 'imports' },
-	[GetHashKey('fmj')] = { model = 'fmj', price = 1200000, banned = false, name = 'Fmj', trunk = 100, type = 'imports' },
 	[GetHashKey('gp1')] = { model = 'gp1', price = 2000000, banned = false, name = 'Gp1', trunk = 100, type = 'imports' },
 	[GetHashKey('infernus')] = { model = 'infernus', price = 700000, banned = false, name = 'Infernus', trunk = 100, type = 'imports' },
-	[GetHashKey('nero')] = { model = 'nero', price = 4500000, banned = false, name = 'Nero', trunk = 100, type = 'imports' },
-	[GetHashKey('nero2')] = { model = 'nero2', price = 3000000, banned = false, name = 'Nero2', trunk = 100, type = 'imports' },
-	[GetHashKey('osiris')] = { model = 'osiris', price = 4000000, banned = false, name = 'Osiris', trunk = 100, type = 'imports' },
-	[GetHashKey('penetrator')] = { model = 'penetrator', price = 1200000, banned = false, name = 'Penetrator', trunk = 100, type = 'imports' },
 	[GetHashKey('pfister811')] = { model = 'pfister811', price = 2000000, banned = false, name = 'Pfister811', trunk = 100, type = 'imports' },
-	[GetHashKey('reaper')] = { model = 'reaper', price = 2500000, banned = false, name = 'Reaper', trunk = 100, type = 'imports' },
-	[GetHashKey('sc1')] = { model = 'sc1', price = 2500000, banned = false, name = 'Sc1', trunk = 100, type = 'imports' },
-	[GetHashKey('scramjet')] = { model = 'scramjet', price = 2500000, banned = false, name = 'scramjet', trunk = 100, type = 'imports' },
-	[GetHashKey('sultanrs')] = { model = 'sultanrs', price = 2000000, banned = false, name = 'Sultan RS', trunk = 100, type = 'imports' },
-	[GetHashKey('italigtb2')] = { model = 'italigtb2', price = 2000000, banned = false, name = 'italigtb2', trunk = 100, type = 'imports' },
-	[GetHashKey('t20')] = { model = 't20', price = 2500000, banned = false, name = 'T20', trunk = 100, type = 'imports' },
-	[GetHashKey('tempesta')] = { model = 'tempesta', price = 4000000, banned = false, name = 'Tempesta', trunk = 100, type = 'imports' },
-	[GetHashKey('turismor')] = { model = 'turismor', price = 5000000, banned = false, name = 'Turismor', trunk = 100, type = 'imports' },
-	[GetHashKey('tyrus')] = { model = 'tyrus', price = 1200000, banned = false, name = 'Tyrus', trunk = 100, type = 'imports' },
 	[GetHashKey('vacca')] = { model = 'vacca', price = 2000000, banned = false, name = 'Vacca', trunk = 100, type = 'imports' },
-	[GetHashKey('visione')] = { model = 'visione', price = 2000000, banned = false, name = 'Visione', trunk = 100, type = 'imports' },
-	[GetHashKey('voltic')] = { model = 'voltic', price = 800000, banned = false, name = 'Voltic', trunk = 100, type = 'imports' },
-	[GetHashKey('voltic2')] = { model = 'voltic2', price = 800000, banned = false, name = 'voltic2', trunk = 100, type = 'imports' },
-	[GetHashKey('zentorno')] = { model = 'zentorno', price = 2000000, banned = false, name = 'Zentorno', trunk = 100, type = 'imports' },
-	[GetHashKey('tyrant')] = { model = 'tyrant', price = 5000000, banned = false, name = 'Tyrant', trunk = 100, type = 'imports' },
-	[GetHashKey('entity2')] = { model = 'entity2', price = 2000000, banned = false, name = 'Entity2', trunk = 100, type = 'imports' },
-	[GetHashKey('entity3')] = { model = 'entity3', price = 2000000, banned = false, name = 'entity3', trunk = 100, type = 'imports' },
-	[GetHashKey('jester2')] = { model = "jester2", price = 2000000, banned = false, name = 'Jester 2', trunk = 100, type = 'imports'},
 	[GetHashKey('taipan')] = { model = 'taipan', price = 2000000, banned = false, name = 'Taipan', trunk = 100, type = 'imports' },
-	[GetHashKey('cyclone')] = { model = 'cyclone', price = 2000000, banned = false, name = 'Cyclone', trunk = 100, type = 'imports' },
-	[GetHashKey('italigtb')] = { model = 'italigtb', price = 2000000, banned = false, name = 'Italigtb', trunk = 100, type = 'imports' },
-	[GetHashKey('italigtb2')] = { model = 'italigtb2', price = 2000000, banned = false, name = 'Italigtb2', trunk = 100, type = 'imports' },
 	[GetHashKey('vagner')] = { model = 'vagner', price = 2000000, banned = false, name = 'Vagner', trunk = 100, type = 'imports' },
-	[GetHashKey('vigilante')] = { model = 'vigilante', price = 2000000, banned = false, name = 'vigilante', trunk = 100, type = 'imports' },
-	[GetHashKey('virtue')] = { model = 'virtue', price = 2000000, banned = false, name = 'virtue', trunk = 100, type = 'imports' },
-	[GetHashKey('xa21')] = { model = 'xa21', price = 2000000, banned = false, name = 'Xa21', trunk = 100, type = 'imports' },
-	[GetHashKey('prototipo')] = { model = 'prototipo', price = 2000000, banned = false, name = 'Prototipo', trunk = 100, type = 'imports' },
 	[GetHashKey('le7b')] = { model = 'le7b', price = 3000000, banned = false, name = 'Le7b', trunk = 100, type = 'imports' },
-	[GetHashKey('sheava')] = { model = 'sheava', price = 4000000, banned = false, name = 'Sheava', trunk = 100, type = 'imports' },
-	[GetHashKey('dodgechargersrt')] = { model = 'dodgechargersrt', price = 2000000, banned = false, name = 'Dodge Charger SRT', trunk = 100, type = 'import' },
-	[GetHashKey('bmwm3f80')] = { model = 'bmwm3f80', price = 1350000, banned = false, name = 'BMW M3 F80', trunk = 100, type = 'import' },
-	[GetHashKey('hondafk8')] = { model = 'hondafk8', price = 1700000, banned = false, name = 'Honda FK8', trunk = 100, type = 'import' },
-	[GetHashKey('mustangmach1')] = { model = 'mustangmach1', price = 1100000, banned = false, name = 'Mustang Mach 1', trunk = 100, type = 'import' },
-	[GetHashKey('porsche930')] = { model = 'porsche930', price = 1300000, banned = false, name = 'Porsche 930', trunk = 100, type = 'import' },
-	[GetHashKey('beetle74')] = { model = 'beetle74', price = 500000, banned = false, name = 'Fusca 74', trunk = 100, type = 'import' },
-	[GetHashKey('fe86')] = { model = 'fe86', price = 500000, banned = false, name = 'Escorte', trunk = 100, type = 'import' },
-	[GetHashKey('type263')] = { model = 'type263', price = 500000, banned = false, name = 'Kombi 63', trunk = 100, type = 'import' },
 	
-    ----------MOTOS	
+	
+	--motos
+
 	[GetHashKey('verus')] = { model = 'verus', price = 200000, banned = false, name = 'Verus', trunk = 40, type = 'motos' },
-	[GetHashKey('akuma')] = { model = 'akuma', price = 2000000, banned = false, name = 'Akuma', trunk = 40, type = 'motos' },
-	[GetHashKey('avarus')] = { model = 'avarus', price = 200000, banned = false, name = 'Avarus', trunk = 40, type = 'motos' },
-	[GetHashKey('bagger')] = { model = 'bagger', price = 200000, banned = false, name = 'Bagger', trunk = 40, type = 'motos' },
-	[GetHashKey('bati')] = { model = 'bati', price = 200000, banned = false, name = 'Bati', trunk = 40, type = 'motos' },
-	[GetHashKey('bati2')] = { model = 'bati2', price = 800000, banned = false, name = 'Bati2', trunk = 40, type = 'motos' },
 	[GetHashKey('bf400')] = { model = 'bf400', price = 200000, banned = false, name = 'Bf400', trunk = 40, type = 'motos' },
 	[GetHashKey('carbonrs')] = { model = 'carbonrs', price = 800000, banned = false, name = 'Carbonrs', trunk = 40, type = 'motos' },
 	[GetHashKey('chimera')] = { model = 'chimera', price = 400000, banned = false, name = 'Chimera', trunk = 40, type = 'motos' },
-	[GetHashKey('cliffhanger')] = { model = 'cliffhanger', price = 250000, banned = false, name = 'Cliffhanger', trunk = 40, type = 'motos' },
-	[GetHashKey('daemon')] = { model = 'daemon', price = 200000, banned = false, name = 'Daemon', trunk = 40, type = 'motos' },
-	[GetHashKey('daemon2')] = { model = 'daemon2', price = 200000, banned = false, name = 'Daemon2', trunk = 40, type = 'motos' },
-	[GetHashKey('defiler')] = { model = 'defiler', price = 700000, banned = false, name = 'Defiler', trunk = 40, type = 'motos' },
 	[GetHashKey('diablous')] = { model = 'diablous', price = 500000, banned = false, name = 'Diablous', trunk = 40, type = 'motos' },
 	[GetHashKey('diablous2')] = { model = 'diablous2', price = 700000, banned = false, name = 'Diablous2', trunk = 40, type = 'motos' },
 	[GetHashKey('double')] = { model = 'double', price = 800000, banned = false, name = 'Double', trunk = 40, type = 'motos' },
 	[GetHashKey('enduro')] = { model = 'enduro', price = 400000, banned = false, name = 'Enduro', trunk = 40, type = 'motos' },
-	[GetHashKey('esskey')] = { model = 'esskey', price = 400000, banned = false, name = 'Esskey', trunk = 40, type = 'motos' },
 	[GetHashKey('faggio')] = { model = 'faggio', price = 4000, banned = false, name = 'Faggio', trunk = 10, type = 'motos' },
 	[GetHashKey('faggio2')] = { model = 'faggio2', price = 5000, banned = false, name = 'Faggio2', trunk = 10, type = 'motos' },
 	[GetHashKey('faggio3')] = { model = 'faggio3', price = 5000, banned = false, name = 'Faggio3', trunk = 10, type = 'motos' },
 	[GetHashKey('fcr')] = { model = 'fcr', price = 300000, banned = false, name = 'Fcr', trunk = 40, type = 'motos' },
 	[GetHashKey('fcr2')] = { model = 'fcr2', price = 400000, banned = false, name = 'Fcr2', trunk = 40, type = 'motos' },
 	[GetHashKey('gargoyle')] = { model = 'gargoyle', price = 450000, banned = false, name = 'Gargoyle', trunk = 40, type = 'motos' },
-	[GetHashKey('hakuchou')] = { model = 'hakuchou', price = 3000000, banned = false, name = 'Hakuchou', trunk = 40, type = 'motos' },
-	[GetHashKey('hakuchou2')] = { model = 'hakuchou2', price = 200000, banned = false, name = 'Hakuchou2', trunk = 40, type = 'motos' },
-	[GetHashKey('hexer')] = { model = 'hexer', price = 200000, banned = false, name = 'Hexer', trunk = 40, type = 'motos' },
-	[GetHashKey('innovation')] = { model = 'innovation', price = 200000, banned = false, name = 'Innovation', trunk = 40, type = 'motos' },
-	[GetHashKey('lectro')] = { model = 'lectro', price = 200000, banned = false, name = 'Lectro', trunk = 40, type = 'motos' },
-	[GetHashKey('manchez')] = { model = 'manchez', price = 800000, banned = false, name = 'Manchez', trunk = 40, type = 'motos' },
 	[GetHashKey('nemesis')] = { model = 'nemesis', price = 250000, banned = false, name = 'Nemesis', trunk = 40, type = 'motos' },
-	[GetHashKey('pcj')] = { model = 'pcj', price = 300000, banned = false, name = 'Pcj', trunk = 40, type = 'motos' },
-	[GetHashKey('ruffian')] = { model = 'ruffian', price = 450000, banned = false, name = 'Ruffian', trunk = 40, type = 'motos' },
-	[GetHashKey('sanchez')] = { model = 'sanchez', price = 400000, banned = false, name = 'Sanchez', trunk = 40, type = 'motos' },
-	[GetHashKey('sanchez2')] = { model = 'sanchez2', price = 500000, banned = false, name = 'Sanchez2', trunk = 40, type = 'motos' },
-	[GetHashKey('sanctus')] = { model = 'sanctus', price = 400000, banned = false, name = 'Sanctus', trunk = 40, type = 'motos' },
-	[GetHashKey('sovereign')] = { model = 'sovereign', price = 200000, banned = false, name = 'Sovereign', trunk = 40, type = 'motos' },
-	[GetHashKey('thrust')] = { model = 'thrust', price = 650000, banned = false, name = 'Thrust', trunk = 40, type = 'motos' },
-	[GetHashKey('vader')] = { model = 'vader', price = 400000, banned = false, name = 'Vader', trunk = 40, type = 'motos' },
-	[GetHashKey('vindicator')] = { model = 'vindicator', price = 200000, banned = false, name = 'Vindicator', trunk = 40, type = 'motos' },
-	[GetHashKey('vortex')] = { model = 'vortex', price = 800000, banned = false, name = 'Vortex', trunk = 40, type = 'motos' },
-	[GetHashKey('wolfsbane')] = { model = 'wolfsbane', price = 400000, banned = false, name = 'Wolfsbane', trunk = 40, type = 'motos' },
-	[GetHashKey('zombiea')] = { model = 'zombiea', price = 250000, banned = false, name = 'Zombiea', trunk = 40, type = 'motos' },
-	[GetHashKey('zombieb')] = { model = 'zombieb', price = 250000, banned = false, name = 'Zombieb', trunk = 40, type = 'motos' },
-	[GetHashKey('blazer')] = { model = 'blazer', price = 750000, banned = false, name = 'Blazer', trunk = 40, type = 'motos' },
-	[GetHashKey('blazer4')] = { model = 'blazer4', price = 800000, banned = false, name = 'Blazer4', trunk = 40, type = 'motos' },
-	[GetHashKey('shotaro')] = { model = 'shotaro', price = 2000000, banned = false, name = 'Shotaro', trunk = 40, type = 'motos' },
-	[GetHashKey('ratbike')] = { model = 'ratbike', price = 200000, banned = false, name = 'Ratbike', trunk = 40, type = 'motos' },
 	
-	--LOJA VIP 
-	----------------------------------------------------------------------------------------------------------------------------------------------------
+	
 	--[[HELIS VIPS]]--
-    [GetHashKey('supervolito')] = { model = 'supervolito', price = 500000, banned = false, name = 'Supervolito', trunk = 150, type = 'vip' },
-    [GetHashKey('supervolito2')] = { model = 'supervolito2', price = 500000, banned = false, name = 'Supervolito 2', trunk = 150, type = 'vip' },
-    [GetHashKey('volatus')] = { model = 'volatus', price = 500000, banned = false, name = 'Volatus', trunk = 200, type = 'vip' },
-    [GetHashKey('swift2')] = { model = 'swift2', price = 500000, banned = false, name = 'Swift2', trunk = 150, type = 'vip' },
-	[GetHashKey('swift')] = { model = 'swift', price = 500000, banned = false, name = 'Swift', trunk = 150, type = 'vip' },
-	[GetHashKey('seasparrow3')] = { model = 'seasparrow3', price = 500000, banned = false, name = 'seasparrow3', trunk = 150, type = 'vip' },
-	[GetHashKey('seasparrow')] = { model = 'seasparrow', price = 500000, banned = false, name = 'seasparrow', trunk = 150, type = 'vip' },
+    
 	[GetHashKey('savage')] = { model = 'savage', price = 500000, banned = false, name = 'savage', trunk = 150, type = 'vip' },
-	[GetHashKey('valkyrie2')] = { model = 'valkyrie2', price = 500000, banned = false, name = 'valkyrie2', trunk = 150, type = 'vip' },
-	[GetHashKey('valkyrie')] = { model = 'valkyrie', price = 500000, banned = false, name = 'valkyrie', trunk = 150, type = 'vip' },
 	[GetHashKey('havok')] = { model = 'havok', price = 500000, banned = false, name = 'havok', trunk = 150, type = 'vip' },
 	[GetHashKey('frogger2')] = { model = 'frogger2', price = 500000, banned = false, name = 'frogger2', trunk = 150, type = 'vip' },
-	[GetHashKey('frogger')] = { model = 'frogger', price = 500000, banned = false, name = 'frogger', trunk = 150, type = 'vip' },
 	[GetHashKey('buzzard')] = { model = 'buzzard', price = 500000, banned = false, name = 'buzzard', trunk = 150, type = 'vip' },
 	[GetHashKey('buzzard2')] = { model = 'buzzard2', price = 500000, banned = false, name = 'buzzard2', trunk = 150, type = 'vip' },
+	
+	
+
+	--parei aquiiiiiiiii
+
 
     --[[AVIÃO]]
 	[GetHashKey('shamal')] = { model = 'shamal', price = 500000, banned = false, name = 'shamal', trunk = 150, type = 'vip' },
@@ -446,28 +175,20 @@ garagesConfig.listCars = {
 	[GetHashKey('luxor2')] = { model = 'luxor2', price = 500000, banned = false, name = 'luxor2', trunk = 150, type = 'vip' },
 	[GetHashKey('vestra')] = { model = 'vestra', price = 500000, banned = false, name = 'vestra', trunk = 150, type = 'vip' },
 	[GetHashKey('rogue')] = { model = 'rogue', price = 500000, banned = false, name = 'rogue', trunk = 150, type = 'vip' },
-	[GetHashKey('nimbus')] = { model = 'nimbus', price = 500000, banned = false, name = 'nimbus', trunk = 150, type = 'vip' },
 	[GetHashKey('duster')] = { model = 'duster', price = 500000, banned = false, name = 'duster', trunk = 150, type = 'vip' },
--------------------------	
---[[vip]]----------------
-	[GetHashKey('wrx15')] = { model = 'wrx15', price = 110000, banned = false, name = 'ford', trunk = 70, type = 'vip' },
+	-------------------------	
+	
+	
+	[GetHashKey('zombiea')] = { model = 'zombiea', price = 250000, banned = false, name = 'Zombiea', trunk = 40, type = 'motos' },
+	[GetHashKey('zombieb')] = { model = 'zombieb', price = 250000, banned = false, name = 'Zombieb', trunk = 40, type = 'motos' },
+	
+    [GetHashKey('wrx15')] = { model = 'wrx15', price = 110000, banned = false, name = 'ford', trunk = 70, type = 'vip' },
 	[GetHashKey('vwgolfgti')] = { model = 'vwgolfgti', price = 110000, banned = false, name = 'VWGTI', trunk = 70, type = 'vip' },
-	[GetHashKey('velar')] = { model = 'velar', price = 110000, banned = false, name = 'velar', trunk = 70, type = 'vip' },
 	[GetHashKey('unofirma')] = { model = 'unofirma', price = 110000, banned = false, name = 'UNOZAO', trunk = 70, type = 'vip' },
 	[GetHashKey('toysupmk4')] = { model = 'toysupmk4', price = 110000, banned = false, name = 'toysup', trunk = 70, type = 'vip' },
 	[GetHashKey('subaruwrx2004')] = { model = 'subaruwrx2004', price = 110000, banned = false, name = 'subaruwrx', trunk = 70, type = 'vip' },
-	[GetHashKey('skyliner34')] = { model = 'skyliner34', price = 110000, banned = false, name = 'skyr34', trunk = 70, type = 'vip' },
 	[GetHashKey('silvia')] = { model = 'silvia', price = 110000, banned = false, name = 'silvi2.0', trunk = 70, type = 'vip' },
-	[GetHashKey('saveirog7')] = { model = 'saveirog7', price = 110000, banned = false, name = 'saveirog', trunk = 70, type = 'vip' },
-	[GetHashKey('sanderors')] = { model = 'sanderors', price = 110000, banned = false, name = 'sander', trunk = 70, type = 'vip' },  --- parei aqui
-	[GetHashKey('s15nihilpurple')] = { model = 's15nihilpurple', price = 110000, banned = false, name = 's15nihil', trunk = 70, type = 'vip' },
-	[GetHashKey('rmodsian')] = { model = 'rmodsian', price = 110000, banned = false, name = 'rmodsi', trunk = 70, type = 'vip' },
-	[GetHashKey('rmodp1gtr')] = { model = 'rmodp1gtr', price = 110000, banned = false, name = 'p1gtr', trunk = 70, type = 'vip' },
-	[GetHashKey('r6')] = { model = 'r6', price = 110000, banned = false, name = 'audr6', trunk = 70, type = 'vip' },
-	[GetHashKey('r34whitedragon')] = { model = 'r34whitedragon', price = 110000, banned = false, name = 'r34white', trunk = 70, type = 'vip' },
 	[GetHashKey('r34reddragon')] = { model = 'r34reddragon', price = 110000, banned = false, name = 'r34dragon', trunk = 70, type = 'vip' },
-	[GetHashKey('r34candylove')] = { model = 'r34candylove', price = 110000, banned = false, name = 'r34candy', trunk = 70, type = 'vip' },
-	[GetHashKey('r34bluedragon')] = { model = 'r34bluedragon', price = 110000, banned = false, name = 'r34blue', trunk = 70, type = 'vip' },
 	[GetHashKey('r33ptnc')] = { model = 'r33ptnc', price = 110000, banned = false, name = 'r33ptnc', trunk = 70, type = 'vip' },
 	[GetHashKey('por718gt4')] = { model = 'por718gt4', price = 110000, banned = false, name = 'por718', trunk = 70, type = 'vip' },
 	[GetHashKey('pistaspider19')] = { model = 'pistaspider19', price = 110000, banned = false, name = 'spider19', trunk = 70, type = 'vip' },
@@ -475,102 +196,531 @@ garagesConfig.listCars = {
 	[GetHashKey('nsxvegas')] = { model = 'nsxvegas', price = 110000, banned = false, name = 'nsxvegas', trunk = 70, type = 'vip' },----troca de logo
 	[GetHashKey('nissantitan17')] = { model = 'nissantitan17', price = 110000, banned = false, name = 'nissantitan17', trunk = 70, type = 'vip' },
 	[GetHashKey('mr53')] = { model = 'mr53', price = 110000, banned = false, name = 'mr5', trunk = 70, type = 'vip' },
+	[GetHashKey('sanderors')] = { model = 'sanderors', price = 110000, banned = false, name = 'sander', trunk = 70, type = 'vip' }, 
+	[GetHashKey('saveirog7')] = { model = 'saveirog7', price = 110000, banned = false, name = 'saveirog', trunk = 70, type = 'vip' },
+	
+	
+	-------------------------------------------------------------|     TOPS     |--------------------------------------------------------
+	
+	
+	[GetHashKey('s15nihilpurple')] = { model = 's15nihilpurple', price = 610000, banned = false, name = 's15nihilpurple', trunk = 70, type = 'vip' },
+	[GetHashKey('rmodsian')] = { model = 'rmodsian', price = 110000, banned = false, name = 'rmodsi', trunk = 70, type = 'vip' },
+	[GetHashKey('rmodp1gtr')] = { model = 'rmodp1gtr', price = 110000, banned = false, name = 'p1gtr', trunk = 70, type = 'vip' },
+	[GetHashKey('r34whitedragon')] = { model = 'r34whitedragon', price = 110000, banned = false, name = 'r34white', trunk = 70, type = 'vip' },
+	[GetHashKey('r34candylove')] = { model = 'r34candylove', price = 110000, banned = false, name = 'r34candy', trunk = 70, type = 'vip' },
+	[GetHashKey('r34bluedragon')] = { model = 'r34bluedragon', price = 110000, banned = false, name = 'r34blue', trunk = 70, type = 'vip' },
 	[GetHashKey('mercedesg65')] = { model = 'mercedesg65', price = 110000, banned = false, name = 'mercedesg6', trunk = 70, type = 'vip' },
 	[GetHashKey('mbbs20')] = { model = 'mbbs20', price = 110000, banned = false, name = 'mercedesm', trunk = 70, type = 'vip' },
 	[GetHashKey('m3g80')] = { model = 'm3g80', price = 110000, banned = false, name = 'M3G', trunk = 70, type = 'vip' },
 	[GetHashKey('m2f22')] = { model = 'm2f22', price = 110000, banned = false, name = 'bmw2f', trunk = 70, type = 'vip' },
 	[GetHashKey('lfa2011')] = { model = 'lfa2011', price = 110000, banned = false, name = 'R2011', trunk = 70, type = 'vip' },
 	[GetHashKey('lanex400')] = { model = 'lanex400', price = 110000, banned = false, name = 'lanex', trunk = 70, type = 'vip' },
-	[GetHashKey('lancerevolution9')] = { model = 'lancerevolution9', price = 110000, banned = false, name = 'lancerevolution9', trunk = 70, type = 'vip' },
-	[GetHashKey('lamborghinihuracan')] = { model = 'lamborghinihuracan', price = 110000, banned = false, name = 'lamborghinihuracan', trunk = 70, type = 'vip' },
+    [GetHashKey('bc')] = { model = 'bc', price = 110000, banned = false, name = 'bc', trunk = 70, type = 'vip' }, -- top
+    [GetHashKey('370zrubytiger')] = { model = '370zrubytiger', price = 110000, banned = false, name = '370zrubytiger', trunk = 70, type = 'vip' },
+	[GetHashKey('2xlr35sakura')] = { model = '2xlr35sakura', price = 110000, banned = false, name = 'r35sakura', trunk = 70, type = 'vip' }, --hellokit
+    [GetHashKey('agerars')] = { model = 'agerars', price = 110000, banned = false, name = 'agerars', trunk = 70, type = 'vip' },
+    [GetHashKey('amarok')] = { model = 'amarok', price = 110000, banned = false, name = 'amarok', trunk = 100, type = 'vip' },
+    [GetHashKey('armoredfpace')] = { model = 'armoredfpace', price = 110000, banned = false, name = 'armoredfpace', trunk = 70, type = 'vip' },
+    [GetHashKey('armoredgle53')] = { model = 'armoredgle53', price = 110000, banned = false, name = 'armoredgle53', trunk = 70, type = 'vip' },
+	[GetHashKey('armoredsian')] = { model = 'armoredsian', price = 110000, banned = false, name = 'armoredsian', trunk = 70, type = 'vip' },
+    [GetHashKey('audirs6')] = { model = 'audirs6', price = 110000, banned = false, name = 'audirs6', trunk = 70, type = 'vip' },
+    [GetHashKey('aventsvjr')] = { model = 'aventsvjr', price = 110000, banned = false, name = 'aventsvjr', trunk = 70, type = 'vip' },
+    [GetHashKey('bmwg07')] = { model = 'bmwg07', price = 110000, banned = false, name = 'bmwg07', trunk = 70, type = 'vip' },
+	[GetHashKey('bmwi8')] = { model = 'bmwi8', price = 110000, banned = false, name = 'bmwi8', trunk = 70, type = 'vip' },
+	[GetHashKey('bmwx6')] = { model = 'bmwx6', price = 110000, banned = false, name = 'bmwx6', trunk = 150, type = 'vip' },
+	[GetHashKey('dodgeram2500')] = { model = 'dodgeram2500', price = 110000, banned = false, name = 'dodgeram', trunk = 180, type = 'vip' },
+	[GetHashKey('eclipse')] = { model = 'eclipse', price = 110000, banned = false, name = 'eclipse', trunk = 70, type = 'vip' },
+	[GetHashKey('ferrariitalia')] = { model = 'ferrariitalia', price = 110000, banned = false, name = 'italia', trunk = 70, type = 'vip' },
+	[GetHashKey('fk8')] = { model = 'fk8', price = 110000, banned = false, name = 'hondak8', trunk = 70, type = 'vip' },
+	[GetHashKey('gol')] = { model = 'gol', price = 110000, banned = false, name = 'gol', trunk = 70, type = 'vip' },
+	[GetHashKey('hycadeevo')] = { model = 'hycadeevo', price = 110000, banned = false, name = 'cadeevo', trunk = 70, type = 'vip' },
+	
 	[GetHashKey('laferrari')] = { model = 'laferrari', price = 110000, banned = false, name = 'laferrari', trunk = 70, type = 'vip' },
 	[GetHashKey('jettagli')] = { model = 'jettagli', price = 110000, banned = false, name = 'jettagli', trunk = 70, type = 'vip' },
-	[GetHashKey('hycadeevo')] = { model = 'hycadeevo', price = 110000, banned = false, name = 'cadeevo', trunk = 70, type = 'vip' },
 	[GetHashKey('gtrpit')] = { model = 'gtrpit', price = 110000, banned = false, name = 'gtr35', trunk = 70, type = 'vip' },
-	[GetHashKey('gol')] = { model = 'gol', price = 110000, banned = false, name = 'gol', trunk = 70, type = 'vip' },
-	[GetHashKey('fk8')] = { model = 'fk8', price = 110000, banned = false, name = 'hondak8', trunk = 70, type = 'vip' },
-	[GetHashKey('ferrariitalia')] = { model = 'ferrariitalia', price = 110000, banned = false, name = 'italia', trunk = 70, type = 'vip' },
-	--[GetHashKey('er34h')] = { model = 'er34h', price = 110000, banned = false, name = 'er34', trunk = 70, type = 'vip' },
-	[GetHashKey('eclipse')] = { model = 'eclipse', price = 110000, banned = false, name = 'eclipse', trunk = 70, type = 'vip' },
-	[GetHashKey('dodgeram2500')] = { model = 'dodgeram2500', price = 110000, banned = false, name = 'dodgeram', trunk = 130, type = 'vip' },
+	-------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	
 	[GetHashKey('dodgecharger')] = { model = 'dodgecharger', price = 110000, banned = false, name = 'dodgecharger', trunk = 70, type = 'vip' },
 	[GetHashKey('celta')] = { model = 'celta', price = 110000, banned = false, name = 'celta', trunk = 70, type = 'vip' },
 	[GetHashKey('c7')] = { model = 'c7', price = 110000, banned = false, name = 'corvet', trunk = 70, type = 'vip' },
 	[GetHashKey('c63')] = { model = 'c63', price = 110000, banned = false, name = 'c63', trunk = 70, type = 'vip' },
 	[GetHashKey('bnr34')] = { model = 'bnr34', price = 110000, banned = false, name = 'bnr34', trunk = 70, type = 'vip' },
-	[GetHashKey('bmwx6')] = { model = 'bmwx6', price = 110000, banned = false, name = 'bmwx6', trunk = 70, type = 'vip' },
-	[GetHashKey('bmwi8')] = { model = 'bmwi8', price = 110000, banned = false, name = 'bmwi8', trunk = 70, type = 'vip' },
-    [GetHashKey('bmwg07')] = { model = 'bmwg07', price = 110000, banned = false, name = 'bmwg07', trunk = 70, type = 'vip' },
-    [GetHashKey('bc')] = { model = 'bc', price = 110000, banned = false, name = 'bc', trunk = 70, type = 'vip' },
-    [GetHashKey('aventsvjr')] = { model = 'aventsvjr', price = 110000, banned = false, name = 'aventsvjr', trunk = 70, type = 'vip' },
-    [GetHashKey('audirs7')] = { model = 'audirs7', price = 110000, banned = false, name = 'audirs7', trunk = 70, type = 'vip' },
-    [GetHashKey('audirs6')] = { model = 'audirs6', price = 110000, banned = false, name = 'audirs6', trunk = 70, type = 'vip' },
-    [GetHashKey('audir8')] = { model = 'audir8', price = 110000, banned = false, name = 'audir8', trunk = 70, type = 'vip' },
-	[GetHashKey('armoredsian')] = { model = 'armoredsian', price = 110000, banned = false, name = 'armoredsian', trunk = 70, type = 'vip' },
-    [GetHashKey('armoredgle53')] = { model = 'armoredgle53', price = 110000, banned = false, name = 'armoredgle53', trunk = 70, type = 'vip' },
-    [GetHashKey('armoredfpace')] = { model = 'armoredfpace', price = 110000, banned = false, name = 'armoredfpace', trunk = 70, type = 'vip' },
-    [GetHashKey('amarok')] = { model = 'amarok', price = 110000, banned = false, name = 'amarok', trunk = 100, type = 'vip' },
-    --[GetHashKey('alphaslambodk')] = { model = 'alphaslambodk', price = 110000, banned = false, name = 'alphaslambodk', trunk = 70, type = 'vip' },
-    [GetHashKey('agerars')] = { model = 'agerars', price = 110000, banned = false, name = 'agerars', trunk = 70, type = 'vip' },
-    --[GetHashKey('acura2f2f')] = { model = 'acura2f2f', price = 110000, banned = false, name = 'acura2f2f', trunk = 70, type = 'vip' },
+    [GetHashKey('acura2f2f')] = { model = 'acura2f2f', price = 110000, banned = false, name = 'acura2f2f', trunk = 70, type = 'vip' },
 	[GetHashKey('HiluxSW4')] = { model = 'HiluxSW4', price = 110000, banned = false, name = 'HiluxSW4', trunk = 70, type = 'vip' },
     [GetHashKey('718b')] = { model = '718b', price = 110000, banned = false, name = '718b', trunk = 70, type = 'vip' },
-    [GetHashKey('370zrubytiger')] = { model = '370zrubytiger', price = 110000, banned = false, name = '370zrubytiger', trunk = 70, type = 'vip' },
-	[GetHashKey('2xlr35sakura')] = { model = '2xlr35sakura', price = 110000, banned = false, name = 'r35sakura', trunk = 70, type = 'vip' },
 	[GetHashKey('wrgt4')] = { model = 'wrgt4', price = 110000, banned = false, name = 'wrgt4', trunk = 150, type = 'vip' },
-	
-
-
-------trabalho
-	[GetHashKey('rumpo')] = { model = 'rumpo', price = 110000, banned = false, name = 'rumpo', trunk = 70, type = 'vip' },
-	-- [GetHashKey('prdiseraptormec')] = { model = 'prdiseraptormec', price = 110000, banned = false, name = 'prdiseraptormec', trunk = 70, type = 'vip' },
-	-- [GetHashKey('prdiseoutlawmec')] = { model = 'prdiseoutlawmec', price = 110000, banned = false, name = 'prdiseoutlawmec', trunk = 70, type = 'vip' },
-	[GetHashKey('maverick2')] = { model = 'maverick2', price = 110000, banned = false, name = 'maverick2', trunk = 70, type = 'vip' },
-	[GetHashKey('frogger')] = { model = 'frogger', price = 110000, banned = false, name = 'frogger', trunk = 70, type = 'vip' },
+	[GetHashKey('rumpo')] = { model = 'rumpo', price = 110000, banned = false, name = 'rumpo', trunk = 70, type = 'vip' }, --van jornal
+	[GetHashKey('maverick2')] = { model = 'maverick2', price = 110000, banned = false, name = 'maverick2', trunk = 70, type = 'work' },
+	[GetHashKey('frogger')] = { model = 'frogger', price = 110000, banned = false, name = 'frogger', trunk = 70, type = 'vip' }, -- heli jornal
 	[GetHashKey('cullinanoab')] = { model = 'cullinanoab', price = 110000, banned = false, name = 'cullinanoab', trunk = 70, type = 'vip' },
-	-- [GetHashKey('corollaoab')] = { model = 'corollaoab', price = 110000, banned = false, name = 'corollaoab', trunk = 70, type = 'vip' },
-	-- [GetHashKey('agstitanfood')] = { model = 'agstitanfood', price = 110000, banned = false, name = 'agstitanfood', trunk = 70, type = 'vip' },
-	-- [GetHashKey('agssprinterhp')] = { model = 'agssprinterhp', price = 110000, banned = false, name = 'agssprinterhp', trunk = 70, type = 'vip' },
-	-- [GetHashKey('agsr1200mec')] = { model = 'agsr1200mec', price = 110000, banned = false, name = 'agsr1200mec', trunk = 70, type = 'vip' },
-	-- [GetHashKey('agsglehp')] = { model = 'agsglehp', price = 110000, banned = false, name = 'agsglehp', trunk = 70, type = 'vip' },
-    -- [GetHashKey('agsb412hp')] = { model = 'agsb412hp', price = 110000, banned = false, name = 'agsb412hp', trunk = 70, type = 'vip' },
-
-------motos
 	[GetHashKey('xreagstore')] = { model = 'xreagstore', price = 110000, banned = false, name = 'xr300', trunk = 30, type = 'vip' },
 	[GetHashKey('zx6r')] = { model = 'zx6r', price = 110000, banned = false, name = '6R', trunk = 30, type = 'vip' },
-	[GetHashKey('xj6')] = { model = 'xj6', price = 110000, banned = false, name = 'xj', trunk = 30, type = 'vip' },
-	[GetHashKey('tenere1200')] = { model = 'tenere1200', price = 110000, banned = false, name = 'nere1200', trunk = 30, type = 'vip' },
-	[GetHashKey('r1200')] = { model = 'r1200', price = 110000, banned = false, name = 'r1200', trunk = 30, type = 'vip' },
-	[GetHashKey('pcx')] = { model = 'pcx', price = 110000, banned = false, name = 'pcx', trunk = 30, type = 'vip' },
+	[GetHashKey('tenere1200')] = { model = 'tenere1200', price = 110000, banned = false, name = 'nere1200', trunk = 60, type = 'vip' },
+	[GetHashKey('r1200')] = { model = 'r1200', price = 110000, banned = false, name = 'r1200', trunk = 60, type = 'vip' },
+	[GetHashKey('pcx')] = { model = 'pcx', price = 110000, banned = false, name = 'pcx', trunk = 100, type = 'vip' },
 	[GetHashKey('m1000rr')] = { model = 'm1000rr', price = 110000, banned = false, name = 's1000', trunk = 30, type = 'vip' },
 	[GetHashKey('h2carb')] = { model = 'h2carb', price = 110000, banned = false, name = 'h2carb', trunk = 30, type = 'vip' },
 	[GetHashKey('f800')] = { model = 'f800', price = 110000, banned = false, name = 'f800', trunk = 30, type = 'vip' },
-	[GetHashKey('dm1200')] = { model = 'dm1200', price = 110000, banned = false, name = 'dm1200', trunk = 30, type = 'vip' },
 	[GetHashKey('cg160')] = { model = 'cg160', price = 110000, banned = false, name = 'cg160', trunk = 30, type = 'vip' },
 	[GetHashKey('cb500x')] = { model = 'cb500x', price = 110000, banned = false, name = 'cb500x', trunk = 30, type = 'vip' },
 	[GetHashKey('africat')] = { model = 'africat', price = 110000, banned = false, name = '6R', trunk = 30, type = 'vip' },
 	[GetHashKey('20r1')] = { model = '20r1', price = 110000, banned = false, name = '20r1', trunk = 70, type = 'vip' },
-
----[[policia]]
-    [GetHashKey('wrcruzeprf')] = { model = 'wrcruzeprf', price = 110000, banned = false, name = 'wrfederal', trunk = 70, type = 'vip' },
-    [GetHashKey('prdisetrailpm')] = { model = 'prdisetrailpm', price = 110000, banned = false, name = 'prdisetrailpm', trunk = 70, type = 'vip' },
-    [GetHashKey('prdisesubarupm')] = { model = 'prdisesubarupm', price = 110000, banned = false, name = 'prdisesubarupm', trunk = 70, type = 'vip' },
-    [GetHashKey('prdiser1200pm')] = { model = 'prdiser1200pm', price = 110000, banned = false, name = 'prdiser1200pm', trunk = 70, type = 'vip' },
-    [GetHashKey('prdiseas350pm')] = { model = 'prdiseas350pm', price = 110000, banned = false, name = 'prdiseas350pm', trunk = 70, type = 'vip' },
-    [GetHashKey('prdisea45civil')] = { model = 'prdisea45civil', price = 110000, banned = false, name = 'prdisea45civil', trunk = 70, type = 'vip' },
-    [GetHashKey('l200bope')] = { model = 'l200bope', price = 110000, banned = false, name = 'l200bope', trunk = 70, type = 'vip' },
-    [GetHashKey('agsxrehp')] = { model = 'agsxrehp', price = 110000, banned = false, name = 'agsxrehp', trunk = 70, type = 'vip' },
-    [GetHashKey('agssandcatpm')] = { model = 'agssandcatpm', price = 110000, banned = false, name = 'agssandcatpm', trunk = 70, type = 'vip' },
-    [GetHashKey('agsmaseraticivil')] = { model = 'agsmaseraticivil', price = 110000, banned = false, name = 'agsmaseraticivil', trunk = 70, type = 'vip' },
-    [GetHashKey('agshiluxprf')] = { model = 'agshiluxprf', price = 110000, banned = false, name = 'agshiluxprf', trunk = 70, type = 'vip' },
-    [GetHashKey('agscorollacivil')] = { model = 'agscorollacivil', price = 110000, banned = false, name = 'agscorollacivil', trunk = 70, type = 'vip' },    
+	[GetHashKey('stinger')] = { model = 'stinger', price = 450000, banned = false, name = 'Stinger', trunk = 60, type = 'outros' },
+	[GetHashKey('wrcruzeprf')] = { model = 'wrcruzeprf', price = 110000, banned = false, name = 'wrfederal', trunk = 70, type = 'vip' },
 	[GetHashKey('zx6r')] = { model = 'zx6r', price = 110000, banned = false, name = '6R', trunk = 70, type = 'vip' },
-    [GetHashKey('agsaudittpm')] = { model = 'agsaudittpm', price = 110000, banned = false, name = 'agsaudittpm', trunk = 70, type = 'vip' },
-    [GetHashKey('agsamaseratipm')] = { model = 'agsamaseratipm', price = 110000, banned = false, name = 'agsamaseratipm', trunk = 70, type = 'vip' },
-	[GetHashKey('agsacorollapm')] = { model = 'agsacorollapm', price = 110000, banned = false, name = 'agsacorollapm', trunk = 70, type = 'vip' },
-    [GetHashKey('agsa911pm')] = { model = 'agsa911pm', price = 110000, banned = false, name = 'agsa911pm', trunk = 70, type = 'vip' },
-   
 	[GetHashKey('wrtrxmecdk')] = { model = 'wrtrxmecdk', price = 110000, banned = false, name = 'wrtrxmecdk', trunk = 250, type = 'work' },
+	[GetHashKey('wrtrxmecrace')] = { model = 'wrtrxmecrace', price = 110000, banned = false, name = 'wrtrxmecrace', trunk = 250, type = 'work' },
+	[GetHashKey('wrflatbedrace')] = { model = 'wrflatbedrace', price = 110000, banned = false, name = 'wrflatbedrace', trunk = 250, type = 'work' },
+	
+	
+	[GetHashKey('wrflatbeddk')] = { model = 'wrflatbeddk', price = 110000, banned = false, name = 'wrflatbeddk', trunk = 250, type = 'work' },
+	
+	
+	[GetHashKey('as350bennys')] = { model = 'as350bennys', price = 600000, banned = false, name = 'as350bennys', trunk = 300, type = 'work' },
+	[GetHashKey('as350sto')] = { model = 'as350sto', price = 600000, banned = false, name = 'as350sto', trunk = 300, type = 'work' },
+	
+	[GetHashKey('sabregt')] = { model = 'sabregt', price = 120000, banned = false, name = 'Sabregt', trunk = 60, type = 'outros' },
+	[GetHashKey('sabregt2')] = { model = 'sabregt2', price = 150000, banned = false, name = 'Sabregt2', trunk = 60, type = 'outros' },
+
+	[GetHashKey('baller')] = { model = 'baller', price = 250000, banned = false, name = 'baller', trunk = 300, type = 'outros' },
+	[GetHashKey('baller2')] = { model = 'baller2', price = 250000, banned = false, name = 'baller2', trunk = 300, type = 'outros' },
+	[GetHashKey('baller4')] = { model = 'baller4', price = 250000, banned = false, name = 'baller4', trunk = 300, type = 'outros' },
+	[GetHashKey('banshee')] = { model = 'banshee', price = 300000, banned = false, name = 'Banshee', trunk = 60, type = 'outros' },
+	[GetHashKey('bestiagts')] = { model = 'bestiagts', price = 400000, banned = false, name = 'Bestiagts', trunk = 60, type = 'outros' },
+	[GetHashKey('bifta')] = { model = 'bifta', price = 400000, banned = false, name = 'bifta', trunk = 60, type = 'outros' },
+	[GetHashKey('bjxl')] = { model = 'bjxl', price = 400000, banned = false, name = 'bjxl', trunk = 40, type = 'outros' },
+	[GetHashKey('superd')] = { model = 'superd', price = 500000, banned = false, name = 'superd', trunk = 60, type = 'sedans' },
+
+	[GetHashKey('350z')] = { model = '350z', price = 250000, banned = false, name = '350z', trunk = 300, type = 'work' },
+	[GetHashKey('450crf')] = { model = '450crf', price = 250000, banned = false, name = '450crf', trunk = 300, type = 'work' },
+	[GetHashKey('adder')] = { model = 'adder', price = 700000, banned = false, name = 'Adder', trunk = 60, type = 'outros' },
+	[GetHashKey('akuma')] = { model = 'akuma', price = 2000000, banned = false, name = 'Akuma', trunk = 40, type = 'motos' },
+	[GetHashKey('alpha')] = { model = 'alpha', price = 200000, banned = false, name = 'Alpha', trunk = 60, type = 'outros' },
+	[GetHashKey('avarus')] = { model = 'avarus', price = 200000, banned = false, name = 'Avarus', trunk = 40, type = 'motos' },
+	[GetHashKey('bagger')] = { model = 'bagger', price = 200000, banned = false, name = 'Bagger', trunk = 40, type = 'motos' },
+	[GetHashKey('bati')] = { model = 'bati', price = 200000, banned = false, name = 'Bati', trunk = 40, type = 'motos' },
+	[GetHashKey('bati2')] = { model = 'bati2', price = 800000, banned = false, name = 'Bati2', trunk = 40, type = 'motos' },
+	[GetHashKey('biz25')] = { model = 'biz25', price = 800000, banned = false, name = 'biz25', trunk = 40, type = 'motos' },
+	[GetHashKey('blazer')] = { model = 'blazer', price = 750000, banned = false, name = 'Blazer', trunk = 40, type = 'motos' },
+	[GetHashKey('blazer4')] = { model = 'blazer4', price = 800000, banned = false, name = 'Blazer4', trunk = 40, type = 'motos' },
+	[GetHashKey('blista')] = { model = 'blista', price = 90000, banned = false, name = 'Blista', trunk = 60, type = 'outros'},
+	[GetHashKey('blista2')] = { model = 'blista2', price = 100000, banned = false, name = 'Blista2', trunk = 60, type = 'outros' },
+	[GetHashKey('blista3')] = { model = 'blista3', price = 200000, banned = false, name = 'Blista3', trunk = 60, type = 'outros' },
+	[GetHashKey('boattrailer')] = { model = 'boattrailer', price = 200000, banned = false, name = 'boattrailer', trunk = 0, type = 'outros' },
+	[GetHashKey('bobcatxl')] = { model = 'bobcatxl', price = 650000, banned = false, name = 'Bobcatxl', trunk = 60, type = 'outros' },
+	[GetHashKey('bodhi2')] = { model = 'bodhi2', price = 650000, banned = false, name = 'bodhi2', trunk = 60, type = 'outros' },
+	[GetHashKey('brawler')] = { model = 'brawler', price = 4000000, banned = false, name = 'Brawler', trunk = 60, type = 'outros' },
+	[GetHashKey('brioso')] = { model = 'brioso', price = 45000, banned = false, name = 'Brioso', trunk = 60, type = 'outros' },
+	[GetHashKey('brioso2')] = { model = "brioso2", price = 70000, banned = false, name = "Brioso 2", trunk = 60, type = 'outros' },
+	[GetHashKey('btype')] = { model = 'btype', price = 200000, banned = false, name = 'Btype', trunk = 60, type = 'outros' },
+	[GetHashKey('btype2')] = { model = 'btype2', price = 200000, banned = false, name = 'Btype2', trunk = 60, type = 'outros' },
+	[GetHashKey('btype3')] = { model = 'btype3', price = 200000, banned = false, name = 'Btype3', trunk = 60, type = 'outros' },
+	[GetHashKey('buccaneer')] = { model = 'buccaneer', price = 200000, banned = false, name = 'Buccaneer', trunk = 60, type = 'sedans' },
+    [GetHashKey('buccaneer2')] = { model = 'buccaneer2', price = 500000, banned = false, name = 'Buccaneer2', trunk = 60, type = 'sedans' },
+	[GetHashKey('buffalo')] = { model = 'buffalo', price = 450000, banned = false, name = 'Buffalo', trunk = 60, type = 'outros' },
+	[GetHashKey('buffalo2')] = { model = 'buffalo2', price = 450000, banned = false, name = 'Buffalo2', trunk = 60, type = 'outros' },
+	[GetHashKey('buffalo3')] = { model = 'buffalo3', price = 400000, banned = false, name = 'Buffalo3', trunk = 60, type = 'outros' },
+	[GetHashKey('bullet')] = { model = 'bullet', price = 800000, banned = false, name = 'Bullet', trunk = 100, type = 'imports' },
+	[GetHashKey('burrito')] = { model = 'burrito', price = 2000000, banned = false, name = 'Burrito', trunk = 60, type = 'outros' },
+	[GetHashKey('burrito2')] = { model = 'burrito2', price = 3000000, banned = false, name = 'Burrito2', trunk = 60, type = 'outros' },
+	[GetHashKey('burrito3')] = { model = 'burrito3', price = 4000000, banned = false, name = 'Burrito3', trunk = 60, type = 'outros' },
+	[GetHashKey('burrito4')] = { model = 'burrito4', price = 5000000, banned = false, name = 'Burrito4', trunk = 60, type = 'outros' },
+	[GetHashKey('cheetah')] = { model = 'cheetah', price = 200000, banned = false, name = 'Cheetah', trunk = 60, type = 'imports' },
+	[GetHashKey('cheetah2')] = { model = 'cheetah2', price = 200000, banned = false, name = 'Cheetah2', trunk = 2600, type = 'outros' },
+	[GetHashKey('cliffhanger')] = { model = 'cliffhanger', price = 250000, banned = false, name = 'Cliffhanger', trunk = 40, type = 'motos' },
+	[GetHashKey('clique')] = { model = 'clique', price = 200000, banned = false, name = 'Clique', trunk = 60, type = 'outros' },
+	[GetHashKey('club')] = { model = 'club', price = 800000, banned = false, name = 'Club', trunk = 60, type = 'outros' },
+    [GetHashKey('cogcabrio')] = { model = 'cogcabrio', price = 220000, banned = false, name = 'Cogcabrio', trunk = 60, type = 'sedans' },
+	[GetHashKey('cognoscenti')] = { model = 'cognoscenti', price = 190000, banned = false, name = 'Cognoscenti', trunk = 60, type = 'outros' },
+	[GetHashKey('cognoscenti2')] = { model = 'cognoscenti2', price = 200000, banned = false, name = 'Cognoscenti2', trunk = 60, type = 'outros' },
+	[GetHashKey('comet2')] = { model = 'comet2', price = 400000, banned = false, name = 'Comet2', trunk = 60, type = 'outros' },
+	[GetHashKey('comet3')] = { model = 'comet3', price = 500000, banned = false, name = 'Comet3', trunk = 60, type = 'outros' },
+	[GetHashKey('comet5')] = { model = 'comet5', price = 1250000, banned = false, name = 'Comet5', trunk = 60, type = 'outros' },
+	[GetHashKey('contender')] = { model = 'contender', price = 1250000, banned = false, name = 'contender', trunk = 60, type = 'outros' },
+	[GetHashKey('coquette3')] = { model = 'coquette3', price = 200000, banned = false, name = 'Coquette3', trunk = 60, type = 'outros' },
+	[GetHashKey('coquette2')] = { model = 'coquette2', price = 400000, banned = false, name = 'Coquette2', trunk = 60, type = 'outros' },
+	[GetHashKey('cyclone')] = { model = 'cyclone', price = 2000000, banned = false, name = 'Cyclone', trunk = 100, type = 'imports' },
+	[GetHashKey('daemon')] = { model = 'daemon', price = 200000, banned = false, name = 'Daemon', trunk = 40, type = 'motos' },
+	[GetHashKey('daemon2')] = { model = 'daemon2', price = 200000, banned = false, name = 'Daemon2', trunk = 40, type = 'motos' },
+	[GetHashKey('defiler')] = { model = 'defiler', price = 700000, banned = false, name = 'Defiler', trunk = 40, type = 'motos' },
+	[GetHashKey('deveste')] = { model = 'deveste', price = 2000000, banned = false, name = 'Deveste', trunk = 60, type = 'outros' },
+	[GetHashKey('deviant')] = { model = 'deviant', price = 200000, banned = false, name = 'Deviant', trunk = 60, type = 'outros' },
+	[GetHashKey('dilettante')] = { model = 'dilettante', price = 100000, banned = false, name = 'Dilettante', trunk = 60, type = 'outros' },
+	[GetHashKey('dubsta2')] = { model = 'dubsta2', price = 100000, banned = false, name = 'dubsta2', trunk = 70, type = 'outros' },
+	[GetHashKey('dubsta3')] = { model = 'dubsta3', price = 100000, banned = false, name = 'dubsta3', trunk = 100, type = 'outros' },
+	[GetHashKey('dukes2')] = { model = 'dukes2', price = 100000, banned = false, name = 'dukes2', trunk = 60, type = 'outros' },
+	[GetHashKey('elegy')] = { model = 'elegy', price = 500000, banned = false, name = 'Elegy', trunk = 60, type = 'outros' },
+	[GetHashKey('elegy2')] = { model = 'elegy2', price = 400000, banned = false, name = 'Elegy2', trunk = 60, type = 'outros' },
+	[GetHashKey('ellie')] = { model = 'ellie', price = 400000, banned = false, name = 'Ellie', trunk = 60, type = 'outros' },
+	[GetHashKey('fd')] = { model = 'fd', price = 400000, banned = false, name = 'fd', trunk = 60, type = 'outros' },
+	[GetHashKey('felon')] = { model = 'felon', price = 300000, banned = false, name = 'Felon', trunk = 60, type = 'sedans' },
+	[GetHashKey('flashgt')] = { model = 'flashgt', price = 700000, banned = false, name = 'Flashgt', trunk = 60, type = 'outros' },
+	[GetHashKey('freecrawler')] = { model = 'freecrawler', price = 700000, banned = false, name = 'freecrawler', trunk = 30, type = 'outros' },
+	[GetHashKey('fugitive')] = { model = 'fugitive', price = 190000, banned = false, name = 'Fugitive', trunk = 60, type = 'sedans' },
+	[GetHashKey('furoregt')] = { model = 'furoregt', price = 200000, banned = false, name = 'Furoregt', trunk = 60, type = 'outros' },
+	[GetHashKey('fusilade')] = { model = 'fusilade', price = 200000, banned = false, name = 'Fusilade', trunk = 60, type = 'outros' },
+	[GetHashKey('futo')] = { model = 'futo', price = 150000, banned = false, name = 'Futo', trunk = 60, type = 'outros' },
+	[GetHashKey('gauntlet2')] = { model = 'gauntlet2', price = 400000, banned = false, name = 'Gauntlet2', trunk = 60, type = 'outros' },
+	[GetHashKey('gauntlet3')] = { model = 'gauntlet3', price = 150000, banned = false, name = 'Gauntlet 3', trunk = 60, type = 'outros' },
+	[GetHashKey('gauntlet4')] = { model = 'gauntlet4', price = 200000, banned = false, name = 'Gauntlet 4', trunk = 60, type = 'outros' },
+	[GetHashKey('gb200')] = { model = 'gb200', price = 500000, banned = false, name = 'Gb200', trunk = 60, type = 'outros' },
+	[GetHashKey('guardian')] = { model = 'guardian', price = 700000, banned = false, name = 'guardian', trunk = 120, type = 'outros' },
+	[GetHashKey('habanero')] = { model = 'habanero', price = 700000, banned = false, name = 'habanero', trunk = 20, type = 'outros' },
+	[GetHashKey('halftrack')] = { model = 'halftrack', price = 700000, banned = false, name = 'halftrack', trunk = 50, type = 'outros' },
+	[GetHashKey('hermes')] = { model = 'hermes', price = 200000, banned = false, name = 'Hermes', trunk = 60, type = 'outros' },
+	[GetHashKey('hotknife')] = { model = 'hotknife', price = 500000, banned = false, name = 'Hotknife', trunk = 60, type = 'outros' },
+	[GetHashKey('howard')] = { model = 'howard', price = 500000, banned = false, name = 'howard', trunk = 60, type = 'aviao' },
+	[GetHashKey('hunter')] = { model = 'hunter', price = 500000, banned = false, name = 'hunter', trunk = 60, type = 'helicoptero' },
+	[GetHashKey('hotring')] = { model = 'hotring', price = 500000, banned = false, name = 'Hotring', trunk = 60, type = 'outros' },
+	[GetHashKey('hustler')] = { model = 'hustler', price = 500000, banned = false, name = 'hustler', trunk = 60, type = 'outros' },
+	[GetHashKey('imorgon')] = { model = 'imorgon', price = 900000, banned = false, name = 'Imorgon', trunk = 60, type = 'outros' },
+	[GetHashKey('impaler')] = { model = 'impaler', price = 130000, banned = false, name = 'Impaler', trunk = 60, type = 'outros' },
+	[GetHashKey('impaler2')] = { model = 'impaler2', price = 130000, banned = false, name = 'impaler2', trunk = 60, type = 'outros' },
+	[GetHashKey('impaler3')] = { model = 'impaler3', price = 130000, banned = false, name = 'impaler3', trunk = 60, type = 'outros' },
+	[GetHashKey('impaler4')] = { model = 'impaler4', price = 130000, banned = false, name = 'impaler4', trunk = 60, type = 'outros' },
+	[GetHashKey('imperator')] = { model = 'imperator', price = 130000, banned = false, name = 'imperator', trunk = 60, type = 'outros' },
+	[GetHashKey('imperator2')] = { model = 'imperator2', price = 130000, banned = false, name = 'imperator2', trunk = 60, type = 'outros' },
+	[GetHashKey('imperator3')] = { model = 'imperator3', price = 130000, banned = false, name = 'imperator3', trunk = 60, type = 'outros' },
+	[GetHashKey('insurgent')] = { model = 'insurgent', price = 130000, banned = false, name = 'insurgent', trunk = 60, type = 'outros' },
+	[GetHashKey('insurgent2')] = { model = 'insurgent2', price = 130000, banned = false, name = 'insurgent2', trunk = 60, type = 'outros' },
+	[GetHashKey('insurgent3')] = { model = 'insurgent3', price = 130000, banned = false, name = 'insurgent3', trunk = 60, type = 'outros' },
+	[GetHashKey('jetmax')] = { model = 'jetmax', price = 130000, banned = false, name = 'jetmax', trunk = 60, type = 'outros' },
+	[GetHashKey('jet')] = { model = 'jet', price = 130000, banned = false, name = 'jet', trunk = 60, type = 'outros' },
+	[GetHashKey('journey')] = { model = 'journey', price = 130000, banned = false, name = 'journey', trunk = 90, type = 'outros' },
+	[GetHashKey('kalahari')] = { model = 'kalahari', price = 130000, banned = false, name = 'kalahari', trunk = 60, type = 'outros' },
+	[GetHashKey('kamacho')] = { model = 'kamacho', price = 130000, banned = false, name = 'kamacho', trunk = 90, type = 'outros' },
+	[GetHashKey('minivan')] = { model = 'minivan', price = 800000, banned = false, name = 'Minivan', trunk = 60, type = 'outros' },
+	[GetHashKey('minivan2')] = { model = 'minivan2', price = 5000000, banned = false, name = 'Minivan2', trunk = 60, type = 'outros' },
+	[GetHashKey('mixer')] = { model = 'mixer', price = 5000000, banned = false, name = 'mixer', trunk = 60, type = 'work' },
+	[GetHashKey('mixer2')] = { model = 'mixer2', price = 5000000, banned = false, name = 'mixer2', trunk = 60, type = 'work' },
+	[GetHashKey('monster')] = { model = 'monster', price = 5000000, banned = false, name = 'monster', trunk = 60, type = 'work' },
+	[GetHashKey('monster3')] = { model = 'monster3', price = 5000000, banned = false, name = 'monster3', trunk = 60, type = 'work' },
+	[GetHashKey('monster4')] = { model = 'monster4', price = 5000000, banned = false, name = 'monster4', trunk = 60, type = 'work' },
+	[GetHashKey('monster5')] = { model = 'monster5', price = 5000000, banned = false, name = 'monster5', trunk = 60, type = 'work' },
+	[GetHashKey('omnis')] = { model = 'omnis', price = 200000, banned = false, name = 'Omnis', trunk = 60, type = 'outros' },
+	[GetHashKey('panto')] = { model = 'panto', price = 5000, banned = false, name = 'Panto', trunk = 60, type = 'outros' },
+	[GetHashKey('paradise')] = { model = 'paradise', price = 200000, banned = false, name = 'Paradise', trunk = 60, type = 'outros' },
+	[GetHashKey('pariah')] = { model = 'pariah', price = 950000, banned = false, name = 'Pariah', trunk = 60, type = 'outros' },
+	[GetHashKey('patriot')] = { model = 'patriot', price = 950000, banned = false, name = 'patriot', trunk = 60, type = 'outros' },
+	[GetHashKey('pbus2')] = { model = 'pbus2', price = 950000, banned = false, name = 'pbus2', trunk = 60, type = 'outros' },
+	[GetHashKey('penumbra2')] = { model = 'penumbra2', price = 600000, banned = false, name = 'Penumbra 2', trunk = 60, type = 'outros' },
+	[GetHashKey('peyote3')] = { model = 'peyote3', price = 300000, banned = false, name = 'Peyote3', trunk = 60, type = 'outros' },
+	[GetHashKey('peyote2')] = { model = 'peyote2', price = 300000, banned = false, name = 'Peyote2', trunk = 60, type = 'outros' },
+	[GetHashKey('peyote')] = { model = 'peyote', price = 300000, banned = false, name = 'Peyote', trunk = 60, type = 'outros' },
+	[GetHashKey('phantom')] = { model = 'phantom', price = 300000, banned = false, name = 'phantom', trunk = 60, type = 'outros' },
+	[GetHashKey('phantom2')] = { model = 'phantom2', price = 300000, banned = false, name = 'phantom2', trunk = 60, type = 'outros' },
+	[GetHashKey('phantom3')] = { model = 'phantom3', price = 300000, banned = false, name = 'phantom3', trunk = 60, type = 'outros' },
+	[GetHashKey('police')] = { model = 'police', price = 300000, banned = false, name = 'police', trunk = 60, type = 'outros' },
+	[GetHashKey('police2')] = { model = 'police2', price = 300000, banned = false, name = 'police2', trunk = 60, type = 'outros' },
+	[GetHashKey('police3')] = { model = 'police3', price = 300000, banned = false, name = 'police3', trunk = 60, type = 'outros' },
+	[GetHashKey('policeb')] = { model = 'policeb', price = 300000, banned = false, name = 'policeb', trunk = 60, type = 'outros' },
+	[GetHashKey('polmav')] = { model = 'polmav', price = 300000, banned = false, name = 'polmav', trunk = 60, type = 'outros' },
+	[GetHashKey('primo2')] = { model = 'primo2', price = 150000, banned = false, name = 'Primo2', trunk = 60, type = 'sedans' },
+	[GetHashKey('primo')] = { model = 'primo', price = 130000, banned = false, name = 'Primo', trunk = 60, type = 'sedans' },
+	[GetHashKey('rapidgt')] = { model = 'rapidgt', price = 800000, banned = false, name = 'Rapidgt', trunk = 60, type = 'outros' },
+	[GetHashKey('rapidgt2')] = { model = 'rapidgt2', price = 200000, banned = false, name = 'Rapidgt2', trunk = 60, type = 'outros' },
+	[GetHashKey('raptor')] = { model = 'raptor', price = 200000, banned = false, name = 'Raptor', trunk = 60, type = 'outros' },
+	[GetHashKey('retinue2')] = { model = 'retinue2', price = 300000, banned = false, name = 'Retinue2', trunk = 60, type = 'outros' },
+	[GetHashKey('rrocket')] = { model = 'rrocket', price = 300000, banned = false, name = 'rrocket', trunk = 60, type = 'outros' },
+	[GetHashKey('rubble')] = { model = 'rubble', price = 300000, banned = false, name = 'rubble', trunk = 60, type = 'outros' },
+	[GetHashKey('ruiner')] = { model = 'ruiner', price = 100000, banned = false, name = 'Ruiner', trunk = 60, type = 'outros' },
+	[GetHashKey('ruiner2')] = { model = 'ruiner2', price = 100000, banned = false, name = 'ruiner2', trunk = 60, type = 'outros' },
+	[GetHashKey('ruiner3')] = { model = 'ruiner3', price = 100000, banned = false, name = 'ruiner3', trunk = 60, type = 'outros' },
+	[GetHashKey('rumpo')] = { model = 'rumpo', price = 200000, banned = false, name = 'Rumpo', trunk = 60, type = 'outros' },
+	[GetHashKey('rumpo2')] = { model = 'rumpo2', price = 160000, banned = false, name = 'Rumpo2', trunk = 60, type = 'outros' },
+	[GetHashKey('serrano')] = { model = 'serrano', price = 160000, banned = false, name = 'serrano', trunk = 60, type = 'outros' },
+	[GetHashKey('skyliner34')] = { model = 'skyliner34', price = 110000, banned = false, name = 'skyr34', trunk = 70, type = 'vip' },
+	[GetHashKey('speedo')] = { model = 'speedo', price = 500000, banned = false, name = 'Speedo', trunk = 60, type = 'service' },
+	[GetHashKey('speedo2')] = { model = 'speedo2', price = 500000, banned = false, name = 'speedo2', trunk = 60, type = 'service' },
+	[GetHashKey('speedo4')] = { model = 'speedo4', price = 500000, banned = false, name = 'speedo4', trunk = 60, type = 'service' },
+	[GetHashKey('stalion')] = { model = 'stalion', price = 400000, banned = false, name = 'Stalion', trunk = 60, type = 'outros' },
+	[GetHashKey('stalion2')] = { model = 'stalion2', price = 260000, banned = false, name = 'Stalion2', trunk = 60, type = 'outros' },
+	[GetHashKey('stanier')] = { model = 'stanier', price = 130000, banned = false, name = 'Stanier', trunk = 60, type = 'sedans' },
+	[GetHashKey('verlierer2')] = { model = 'verlierer2', price = 350000, banned = false, name = 'Verlierer2', trunk = 60, type = 'outros' },
+	[GetHashKey('yosemite')] = { model = 'yosemite', price = 800000, banned = false, name = 'Yosemite', trunk = 60, type = 'outros' },
+	[GetHashKey('yosemite3')] = { model = 'yosemite3', price = 200000, banned = false, name = 'Yosemite3', trunk = 60, type = 'outros' },
+	[GetHashKey('youga')] = { model = 'youga', price = 200000, banned = false, name = 'youga', trunk = 60, type = 'outros' },
+	[GetHashKey('youga2')] = { model = 'youga2', price = 200000, banned = false, name = 'youga2', trunk = 60, type = 'outros' },
+	[GetHashKey('z1000')] = { model = 'z1000', price = 200000, banned = false, name = 'z1000', trunk = 60, type = 'motos' },
+
+	[GetHashKey('turismo2')] = { model = 'turismo2', price = 200000, banned = false, name = 'Turismo2', trunk = 60, type = 'outros' },
+	[GetHashKey('vamos')] = { model = 'vamos', price = 900000, banned = false, name = 'Vamos', trunk = 60, type = 'outros' },
+	[GetHashKey('washington')] = { model = 'washington', price = 150000, banned = false, name = 'Washington', trunk = 60, type = 'sedans' },
+	
+	[GetHashKey('s80')] = { model = 's80', price = 2000000, banned = false, name = 'S80', trunk = 100, type = 'imports' },
+	[GetHashKey('sc1')] = { model = 'sc1', price = 2500000, banned = false, name = 'Sc1', trunk = 100, type = 'imports' },
+	[GetHashKey('savestra')] = { model = 'savestra', price = 400000, banned = false, name = 'Savestra', trunk = 60, type = 'outros' },
+	[GetHashKey('rhapsody')] = { model = 'rhapsody', price = 100000, banned = false, name = 'Rhapsody', trunk = 60, type = 'sedans' },
+	[GetHashKey('riata')] = { model = 'riata', price = 100000, banned = false, name = 'riata', trunk = 60, type = 'sedans' },
+	[GetHashKey('rocoto')] = { model = 'rocoto', price = 100000, banned = false, name = 'rocoto', trunk = 60, type = 'sedans' },
+	[GetHashKey('romero')] = { model = 'romero', price = 500000, banned = false, name = 'Funerário', trunk = 60, type = 'sedans' },
+	[GetHashKey('stingergt')] = { model = 'stingergt', price = 400000, banned = false, name = 'Stingergt', trunk = 60, type = 'outros' },
+	[GetHashKey('sultan2')] = { model = 'sultan2', price = 500000, banned = false, name = 'Sultan 2', trunk = 60, type = 'outros' },
+	[GetHashKey('t20')] = { model = 't20', price = 2500000, banned = false, name = 'T20', trunk = 100, type = 'imports' },
+	[GetHashKey('tampa')] = { model = 'tampa', price = 200000, banned = false, name = 'Tampa', trunk = 60, type = 'outros' },
+	[GetHashKey('tribike2')] = { model = 'tribike2', price = 200000, banned = false, name = 'Tribike2', trunk = 0, type = 'service' },
+	[GetHashKey('tribike3')] = { model = 'tribike3', price = 200000, banned = false, name = 'Tribike3', trunk = 0, type = 'service' },
+	[GetHashKey('trophytruck')] = { model = 'trophytruck', price = 200000, banned = false, name = 'trophytruck', trunk = 0, type = 'service' },
+	[GetHashKey('trophytruck2')] = { model = 'trophytruck2', price = 200000, banned = false, name = 'trophytruck2', trunk = 0, type = 'service' },
+	[GetHashKey('zion')] = { model = 'zion', price = 150000, banned = false, name = 'Zion', trunk = 60, type = 'sedans' },
+    [GetHashKey('zion2')] = { model = 'zion2', price = 300000, banned = false, name = 'Zion2', trunk = 60, type = 'sedans' },
+	[GetHashKey('ztype')] = { model = 'ztype', price = 200000, banned = false, name = 'Ztype', trunk = 60, type = 'outros' },
+
+	[GetHashKey('sentinel3')] = { model = 'sentinel3', price = 200000, banned = false, name = 'Sentinel3', trunk = 60, type = 'outros' },
+	[GetHashKey('sentinel2')] = { model = 'sentinel2', price = 130000, banned = false, name = 'Sentinel2', trunk = 60, type = 'sedans' },
+	[GetHashKey('schafter4')] = { model = 'schafter4', price = 250000, banned = false, name = 'Schafter4', trunk = 60, type = 'outros' },
+	[GetHashKey('schafter3')] = { model = 'schafter3', price = 300000, banned = false, name = 'Schafter3', trunk = 60, type = 'outros' },
+	[GetHashKey('regina')] = { model = 'regina', price = 200000, banned = false,  name = 'Regina', trunk = 60, type = 'sedans' },
+	[GetHashKey('pony')] = { model = 'pony', price = 160000, banned = false, name = 'Pony', trunk = 60, type = 'outros' },
+	[GetHashKey('pony2')] = { model = 'pony2', price = 2000000, banned = false, name = 'Pony2', trunk = 100, type = 'outros' },
+	[GetHashKey('picador')] = { model = 'picador', price = 200000, banned = false, name = 'Picador', trunk = 60, type = 'outros' },
+	[GetHashKey('paragon2')] = { model = 'paragon2', price = 800000, banned = false, name = 'paragon2', trunk = 60, type = 'outros' },
+	[GetHashKey('paragon')] = { model = 'paragon', price = 800000, banned = false, name = 'Paragon', trunk = 60, type = 'outros' },
+	[GetHashKey('ninef')] = { model = 'ninef', price = 950000, banned = false, name = 'Ninef', trunk = 60, type = 'outros' },
+	[GetHashKey('ninef2')] = { model = 'ninef2', price = 950000, banned = false, name = 'Ninef2', trunk = 60, type = 'outros' },
+	[GetHashKey('michelli')] = { model = 'michelli', price = 200000, banned = false, name = 'Michelli', trunk = 60, type = 'outros' },
+	[GetHashKey('kuruma2')] = { model = 'kuruma2', price = 7500000, banned = false, name = 'kuruma2', trunk = 60, type = 'outros' },
+	[GetHashKey('kuruma')] = { model = 'kuruma', price = 7500000, banned = false, name = 'Kuruma', trunk = 60, type = 'outros' },
+	[GetHashKey('khamelion')] = { model = 'khamelion', price = 200000, banned = false, name = 'Khamelion', trunk = 60, type = 'outros' },
+	[GetHashKey('jester3')] = { model = 'jester3', price = 200000, banned = false, name = 'Jester3', trunk = 60, type = 'outros' },
+	[GetHashKey('issi6')] = { model = 'issi6', price = 200000, banned = false, name = 'issi6', trunk = 60, type = 'outros' },
+	[GetHashKey('issi5')] = { model = 'issi5', price = 200000, banned = false, name = 'Issi5', trunk = 60, type = 'outros' },
+	[GetHashKey('issi4')] = { model = 'issi4', price = 200000, banned = false,  name = 'Issi4', trunk = 60, type = 'outros' },
+	[GetHashKey('issi3')] = { model = 'issi3', price = 100000, banned = false, name = 'Issi3', trunk = 60, type = 'outros' },
+	[GetHashKey('issi2')] = { model = 'issi2', price = 200000, banned = false, name = 'Issi2', trunk = 60, type = 'sedans' },
+	[GetHashKey('intruder')] = { model = 'intruder', price = 90000, banned = false, name = 'Intruder', trunk = 60, type = 'sedans' },
+	[GetHashKey('glendale')] = { model = 'glendale', price = 80000, banned = false, name = 'Glendale', trunk = 60, type = 'sedans' }, 
+	[GetHashKey('glendale2')] = { model = 'glendale2', price = 250000, banned = false, name = 'Glendale 2', trunk = 60, type = 'sedans' },
+	[GetHashKey('ingot')] = { model = 'ingot', price = 100000, banned = false, name = 'Ingot', trunk = 60, type = 'sedans' },
+	[GetHashKey('nightshade')] = { model = 'nightshade', price = 450000, banned = false, name = 'Nightshade', trunk = 60, type = 'outros' },
+	[GetHashKey('nightshark')] = { model = 'nightshark', price = 450000, banned = false, name = 'nightshark', trunk = 60, type = 'outros' },
+	[GetHashKey('premier')] = { model = 'premier', price = 150000, banned = false, name = 'Premier', trunk = 60, type = 'sedans' },
+	[GetHashKey('prototipo')] = { model = 'prototipo', price = 2000000, banned = false, name = 'Prototipo', trunk = 100, type = 'imports' },
+	[GetHashKey('revolter')] = { model = 'revolter', price = 200000, banned = false, name = 'Revolter', trunk = 60, type = 'outros' },
+	[GetHashKey('schafter2')] = { model = 'schafter2', price = 100000, banned = false, name = 'Schafter 2', trunk = 60, type = 'outros' },
+	[GetHashKey('schlagen')] = { model = 'schlagen', price = 500000, banned = false, name = 'Schlagen', trunk = 60, type = 'outros' },
+	[GetHashKey('schwarzer')] = { model = 'schwarzer', price = 250000, banned = false, name = 'Schwarzer', trunk = 60, type = 'outros' },
+	[GetHashKey('slamvan')] = { model = 'slamvan', price = 250000, banned = false, name = 'slamvan', trunk = 60, type = 'outros' },
+	[GetHashKey('slamvan2')] = { model = 'slamvan2', price = 250000, banned = false, name = 'slamvan2', trunk = 60, type = 'outros' },
+	[GetHashKey('slamvan3')] = { model = 'slamvan3', price = 250000, banned = false, name = 'slamvan3', trunk = 60, type = 'outros' },
+	[GetHashKey('sultanrs')] = { model = 'sultanrs', price = 2000000, banned = false, name = 'Sultan RS', trunk = 100, type = 'imports' },
+	[GetHashKey('surano')] = { model = 'surano', price = 200000, banned = false, name = 'Surano', trunk = 60, type = 'outros' },
+	[GetHashKey('surfer')] = { model = 'surfer', price = 500000, banned = false, name = 'Surfer', trunk = 60, type = 'outros' },
+	[GetHashKey('surfer2')] = { model = 'surfer2', price = 500000, banned = false, name = 'surfer2', trunk = 60, type = 'outros' },
+	[GetHashKey('swinger')] = { model = 'swinger', price = 550000, banned = false, name = 'Swinger', trunk = 60, type = 'outros' },
+	[GetHashKey('tampa2')] = { model = 'tampa2', price = 300000, banned = false, name = 'Tampa2', trunk = 60, type = 'outros' },
+	[GetHashKey('tornado2')] = { model = 'tornado2', price = 300000, banned = false, name = 'Tornado2', trunk = 60, type = 'outros' },
+	[GetHashKey('tornado3')] = { model = 'tornado3', price = 300000, banned = false, name = 'tornado3', trunk = 60, type = 'outros' },
+	[GetHashKey('tornado4')] = { model = 'tornado4', price = 300000, banned = false, name = 'tornado4', trunk = 60, type = 'outros' },
+	[GetHashKey('tornado5')] = { model = 'tornado5', price = 50000, banned = false, name = 'Tornado5', trunk = 60, type = 'outros' },
+	[GetHashKey('tornado6')] = { model = 'tornado6', price = 80000, banned = false, name = 'Tornado6', trunk = 60, type = 'outros' },
+	[GetHashKey('toros')] = { model = 'toros', price = 80000, banned = false, name = 'toros', trunk = 60, type = 'outros' },
+	[GetHashKey('towtruck')] = { model = 'towtruck', price = 80000, banned = false, name = 'towtruck', trunk = 60, type = 'outros' },
+	[GetHashKey('towtruck2')] = { model = 'towtruck2', price = 80000, banned = false, name = 'towtruck2', trunk = 60, type = 'outros' },
+	[GetHashKey('tractor2')] = { model = 'tractor2', price = 160000, banned = false, name = 'Tractor2', trunk = 60, type = 'service' },
+	[GetHashKey('voltic')] = { model = 'voltic', price = 800000, banned = false, name = 'Voltic', trunk = 100, type = 'imports' },
+	[GetHashKey('voltic2')] = { model = 'voltic2', price = 800000, banned = false, name = 'voltic2', trunk = 100, type = 'imports' },
+	[GetHashKey('voodoo')] = { model = 'voodoo', price = 300000, banned = false, name = 'Voodoo', trunk = 60, type = 'outros' },
+	[GetHashKey('voodoo2')] = { model = 'voodoo2', price = 100000, banned = false, name = 'Voodoo2', trunk = 60, type = 'outros' },
+	[GetHashKey('wastelander')] = { model = 'wastelander', price = 100000, banned = false, name = 'wastelander', trunk = 60, type = 'outros' },
+	[GetHashKey('zorrusso')] = { model = 'zorrusso', price = 3500000, banned = false, name = 'Zorrusso', trunk = 100, type = 'imports'  },
+
+	[GetHashKey('tyrant')] = { model = 'tyrant', price = 5000000, banned = false, name = 'Tyrant', trunk = 100, type = 'imports' },
+	[GetHashKey('warrener')] = { model = 'warrener', price = 100000, banned = false, name = 'Warrener', trunk = 60, type = 'sedans' },
+	[GetHashKey('zr380')] = { model = 'zr380', price = 100000, banned = false, name = 'zr380', trunk = 60, type = 'sedans' },
+	[GetHashKey('zr3802')] = { model = 'zr3802', price = 100000, banned = false, name = 'zr3802', trunk = 60, type = 'sedans' },
+	[GetHashKey('zr3803')] = { model = 'zr3803', price = 100000, banned = false, name = 'zr3803', trunk = 60, type = 'sedans' },
+
+	[GetHashKey('tropos')] = { model = 'tropos', price = 450000, banned = false, name = 'Tropos', trunk = 60, type = 'outros' },
+	[GetHashKey('vigero')] = { model = 'vigero', price = 170000, banned = false, name = 'Vigero', trunk = 60, type = 'outros' },
+
+	[GetHashKey('trash')] = { model = 'trash', price = 200000, banned = false, name = 'trash', trunk = 60, type = 'service' }, --lixeiro
+	[GetHashKey('trash2')] = { model = 'trash2', price = 200000, banned = false, name = 'Caminhão', trunk = 60, type = 'service' }, --lixeiro
+	
+	[GetHashKey('tezeract')] = { model = 'tezeract', price = 7000000, banned = false, name = 'Tezeract', trunk = 60, type = 'outros' },
+	[GetHashKey('scramjet')] = { model = 'scramjet', price = 2500000, banned = false, name = 'scramjet', trunk = 100, type = 'imports' },
+	[GetHashKey('seven70')] = { model = 'seven70', price = 200000, banned = false, name = 'Seven70', trunk = 60, type = 'outros' },
+	[GetHashKey('microlight')] = { model = 'microlight', price = 5000000, banned = false, name = 'microlight', trunk = 0, type = 'aviao' },
+	[GetHashKey('mammatus')] = { model = 'mammatus', price = 5000000, banned = false, name = 'mammatus', trunk = 0, type = 'aviao' },
+	[GetHashKey('lazer')] = { model = 'lazer', price = 5000000, banned = false, name = 'lazer', trunk = 0, type = 'aviao' },
+	[GetHashKey('miljet')] = { model = 'miljet', price = 5000000, banned = false, name = 'miljet', trunk = 0, type = 'aviao' },
+	[GetHashKey('surge')] = { model = 'surge', price = 220000, banned = false, name = 'Surge', trunk = 60, type = 'sedans' },
+	[GetHashKey('windsor')] = { model = 'windsor', price = 220000, banned = false, name = 'Windsor', trunk = 60, type = 'sedans' },
+    [GetHashKey('windsor2')] = { model = 'windsor2', price = 170000, banned = false, name = 'Windsor2', trunk = 60, type = 'sedans' },
+
+	[GetHashKey('schafter5')] = { model = 'schafter5', price = 175000, banned = false, name = 'Schafter5', trunk = 60, type = 'outros' },
+	[GetHashKey('schafter6')] = { model = 'schafter6', price = 175000, banned = false, name = 'schafter6', trunk = 60, type = 'outros' },
+	[GetHashKey('tempesta')] = { model = 'tempesta', price = 4000000, banned = false, name = 'Tempesta', trunk = 100, type = 'imports' },
+	[GetHashKey('torero')] = { model = 'torero', price = 300000, banned = false, name = 'Torero', trunk = 60, type = 'outros' },
+
+	[GetHashKey('ratbike')] = { model = 'ratbike', price = 200000, banned = false, name = 'Ratbike', trunk = 40, type = 'motos' },
+	[GetHashKey('rapidgt3')] = { model = 'rapidgt3', price = 650000, banned = false, name = 'Rapidgt3', trunk = 60, type = 'outros' },
+	[GetHashKey('prairie')] = { model = 'prairie', price = 80000, banned = false, name = 'Prairie', trunk = 60, type = 'sedans' },
+	[GetHashKey('pounder')] = { model = 'pounder', price = 200000, banned = false, name = 'pounder', trunk = 300, type = 'vip' }, --pounder2
+	[GetHashKey('pounder2')] = { model = 'pounder2', price = 200000, banned = false, name = 'pounder2', trunk = 300, type = 'vip' }, --pounder2
+	[GetHashKey('terbyte')] = { model = 'terbyte', price = 200000, banned = false, name = 'terbyte', trunk = 300, type = 'vip' }, --pounder2
+
+	[GetHashKey('tiptruck')] = { model = 'tiptruck', price = 200000, banned = false, name = 'Tiptruck', trunk = 60, type = 'service' }, --minerador
+	[GetHashKey('tiptruck2')] = { model = 'tiptruck2', price = 200000, banned = false, name = 'tiptruck2', trunk = 60, type = 'service' }, --minerador
+
+	[GetHashKey('tractor')] = { model = 'tractor', price = 50000, banned = false, name = 'Tractor', trunk = 60, type = 'outros'},
+	[GetHashKey('vagrant')] = { model = 'vagrant', price = 50000, banned = false, name = 'vagrant', trunk = 60, type = 'outros'},
+
+	[GetHashKey('phoenix')] = { model = 'phoenix', price = 160000, banned = false, name = 'Phoenix', trunk = 60, type = 'sedans' },
+	[GetHashKey('reaper')] = { model = 'reaper', price = 2500000, banned = false, name = 'Reaper', trunk = 100, type = 'imports' },
+	[GetHashKey('osiris')] = { model = 'osiris', price = 4000000, banned = false, name = 'Osiris', trunk = 100, type = 'imports' },
+	[GetHashKey('oracle')] = { model = 'oracle', price = 120000, banned = false, name = 'Oracle', trunk = 60, type = 'sedans' },
+    [GetHashKey('oracle2')] = { model = 'oracle2', price = 150000, banned = false, name = 'Oracle2', trunk = 60, type = 'sedans' },
+	[GetHashKey('moonbeam')] = { model = 'moonbeam', price = 500000, banned = false, name = 'Moonbeam', trunk = 100, type = 'outros' },
+	[GetHashKey('moonbeam2')] = { model = 'moonbeam2', price = 5000000, banned = false, name = 'Moonbeam2', trunk = 100, type = 'outros' },
+	[GetHashKey('infernus2')] = { model = 'infernus2', price = 200000, banned = false, name = 'Infernus2', trunk = 60, type = 'outros' },
+	[GetHashKey('infernus')] = { model = 'infernus', price = 200000, banned = false, name = 'Infernus', trunk = 60, type = 'outros' },
+	[GetHashKey('italigto')] = { model = 'italigto', price = 5000000, banned = false, name = 'Italigto', trunk = 60, type = 'outros' },
+	[GetHashKey('le7b')] = { model = 'le7b', price = 5000000, banned = false, name = 'le7b', trunk = 60, type = 'outros' },
+	[GetHashKey('lguard')] = { model = 'lguard', price = 50000, banned = false, name = 'lguard', trunk = 30, type = 'outros' },
+	[GetHashKey('lynx')] = { model = 'lynx', price = 800000, banned = false, name = 'Lynx', trunk = 60, type = 'outros' },
+	[GetHashKey('m3e46')] = { model = 'm3e46', price = 800000, banned = false, name = 'm3e46', trunk = 60, type = 'outros' },
+	[GetHashKey('mamba')] = { model = 'mamba', price = 400000, banned = false, name = 'Mamba', trunk = 60, type = 'outros' },
+	[GetHashKey('manana')] = { model = 'manana', price = 75000, banned = false, name = 'Manana', trunk = 60, type = 'outros' },
+	[GetHashKey('manana2')] = { model = 'manana2', price = 300000, banned = false, name = 'Manana 2', trunk = 60, type = 'outros' },
+	[GetHashKey('packer')] = { model = 'packer', price = 300000, banned = false, name = 'packer', trunk = 90, type = 'outros' },
+	[GetHashKey('penetrator')] = { model = 'penetrator', price = 1200000, banned = false, name = 'Penetrator', trunk = 100, type = 'imports' },
+	[GetHashKey('sheava')] = { model = 'sheava', price = 4000000, banned = false, name = 'Sheava', trunk = 100, type = 'imports' },
+	[GetHashKey('stafford')] = { model = 'stafford', price = 200000, banned = false, name = 'Stafford', trunk = 60, type = 'sedans' },
+	[GetHashKey('stretch')] = { model = 'stretch', price = 200000, banned = false, name = 'Limousine', trunk = 60, type = 'sedans' },
+	[GetHashKey('tailgater')] = { model = 'tailgater', price = 160000, banned = false, name = 'Tailgater', trunk = 60, type = 'sedans' },
+	[GetHashKey('tailgater2')] = { model = 'tailgater2', price = 160000, banned = false, name = 'tailgater2', trunk = 60, type = 'sedans' },
+	[GetHashKey('taipan')] = { model = 'taipan', price = 160000, banned = false, name = 'taipan', trunk = 60, type = 'sedans' },
+	[GetHashKey('thrax')] = { model = 'thrax', price = 5000000, banned = false, name = 'Thrax', trunk = 100, type = 'imports' },
+	[GetHashKey('thrust')] = { model = 'thrust', price = 650000, banned = false, name = 'Thrust', trunk = 40, type = 'motos' },
+	[GetHashKey('turismor')] = { model = 'turismor', price = 5000000, banned = false, name = 'Turismor', trunk = 100, type = 'imports' },
+	[GetHashKey('visione')] = { model = 'visione', price = 2000000, banned = false, name = 'Visione', trunk = 100, type = 'imports' },
+
+	[GetHashKey('vader')] = { model = 'vader', price = 400000, banned = false, name = 'Vader', trunk = 40, type = 'motos' },
+	[GetHashKey('xa21')] = { model = 'xa21', price = 2000000, banned = false, name = 'Xa21', trunk = 100, type = 'imports' },
+	[GetHashKey('tyrus')] = { model = 'tyrus', price = 1200000, banned = false, name = 'Tyrus', trunk = 100, type = 'imports' },
+
+	[GetHashKey('tornado')] = { model = 'tornado', price = 100000, banned = false, name = 'Tornado', trunk = 60, type = 'outros' },
+	[GetHashKey('jackal')] = { model = 'jackal', price = 200000, banned = false, name = 'Jackal', trunk = 60, type = 'sedans' },
+	[GetHashKey('kurus')] = { model = 'kurus', price = 600000, banned = false, name = 'kurus', trunk = 300, type = 'work' },
+	[GetHashKey('urus')] = { model = 'urus', price = 600000, banned = false, name = 'urus', trunk = 300, type = 'work' },
+	[GetHashKey('landstalker')] = { model = 'landstalker', price = 600000, banned = false, name = 'landstalker', trunk = 30, type = 'work' },
+	[GetHashKey('mule2')] = { model = 'mule2', price = 1600000, banned = false, name = 'mule2', trunk = 1500, type = 'vip' },
+	[GetHashKey('mule3')] = { model = 'mule3', price = 1800000, banned = false, name = 'mule3', trunk = 2000, type = 'vip' },
+	[GetHashKey('mule4')] = { model = 'mule4', price = 1800000, banned = false, name = 'mule4', trunk = 2000, type = 'vip' },
+	[GetHashKey('nimbus')] = { model = 'nimbus', price = 500000, banned = false, name = 'nimbus', trunk = 150, type = 'vip' },
+	[GetHashKey('rallytruck')] = { model = 'rallytruck', price = 500000, banned = false, name = 'rallytruck', trunk = 1000, type = 'vip' },
+	[GetHashKey('seasparrow3')] = { model = 'seasparrow3', price = 500000, banned = false, name = 'seasparrow3', trunk = 150, type = 'vip' },
+	[GetHashKey('seasparrow')] = { model = 'seasparrow', price = 500000, banned = false, name = 'seasparrow', trunk = 150, type = 'vip' },
+	[GetHashKey('seasparrow2')] = { model = 'seasparrow2', price = 500000, banned = false, name = 'seasparrow2', trunk = 150, type = 'vip' },
+	[GetHashKey('swift2')] = { model = 'swift2', price = 500000, banned = false, name = 'Swift2', trunk = 150, type = 'vip' },
+	[GetHashKey('swift')] = { model = 'swift', price = 500000, banned = false, name = 'Swift', trunk = 150, type = 'vip' },
+	[GetHashKey('valkyrie2')] = { model = 'valkyrie2', price = 500000, banned = false, name = 'valkyrie2', trunk = 150, type = 'vip' },
+	[GetHashKey('valkyrie')] = { model = 'valkyrie', price = 500000, banned = false, name = 'valkyrie', trunk = 150, type = 'vip' },
+	[GetHashKey('velar')] = { model = 'velar', price = 110000, banned = false, name = 'velar', trunk = 70, type = 'vip' },
+	[GetHashKey('zentorno')] = { model = 'zentorno', price = 2000000, banned = false, name = 'Zentorno', trunk = 100, type = 'imports' },
+
+	[GetHashKey('r6')] = { model = 'r6', price = 110000, banned = false, name = 'audr6', trunk = 70, type = 'vip' },
+	[GetHashKey('specter')] = { model = 'specter', price = 2000000, banned = false, name = 'Specter', trunk = 60, type = 'outros' },
+	[GetHashKey('specter2')] = { model = 'specter2', price = 900000, banned = false, name = 'Specter2', trunk = 60, type = 'outros' },
+	[GetHashKey('stromberg')] = { model = 'stromberg', price = 900000, banned = false, name = 'stromberg', trunk = 60, type = 'outros' },
+	[GetHashKey('stryder')] = { model = 'stryder', price = 900000, banned = false, name = 'stryder', trunk = 60, type = 'outros' },
+	[GetHashKey('vigilante')] = { model = 'vigilante', price = 2000000, banned = false, name = 'vigilante', trunk = 100, type = 'imports' },
+	[GetHashKey('vindicator')] = { model = 'vindicator', price = 200000, banned = false, name = 'Vindicator', trunk = 40, type = 'motos' },
+
+
+	[GetHashKey('massacro')] = { model = 'massacro', price = 75000, banned = false, name = 'Massacro', trunk = 60, type = 'outros' },
+	[GetHashKey('menacer')] = { model = 'menacer', price = 75000, banned = false, name = 'menacer', trunk = 60, type = 'outros' },
+	[GetHashKey('mesa2')] = { model = 'mesa2', price = 75000, banned = false, name = 'mesa2', trunk = 60, type = 'outros' },
+	[GetHashKey('mesa')] = { model = 'mesa', price = 75000, banned = false, name = 'mesa', trunk = 60, type = 'outros' },
+	[GetHashKey('mesa3')] = { model = 'mesa3', price = 75000, banned = false, name = 'mesa3', trunk = 60, type = 'outros' },
+	[GetHashKey('nebula')] = { model = 'nebula', price = 75000, banned = false, name = 'nebula', trunk = 60, type = 'outros' },
+	[GetHashKey('radi')] = { model = 'radi', price = 75000, banned = false, name = 'radi', trunk = 60, type = 'outros' },
+	[GetHashKey('rebla')] = { model = 'rebla', price = 75000, banned = false, name = 'rebla', trunk = 60, type = 'outros' },
+	[GetHashKey('sandking2')] = { model = 'sandking2', price = 2500000, banned = false, name = 'Sandking2', trunk = 60, type = 'outros' },
+	[GetHashKey('sandking')] = { model = 'sandking', price = 2500000, banned = false, name = 'Sandking', trunk = 60, type = 'outros' },
+	[GetHashKey('seminole')] = { model = 'seminole', price = 2500000, banned = false, name = 'seminole', trunk = 60, type = 'outros' },
+	[GetHashKey('streiter')] = { model = 'streiter', price = 600000, banned = false, name = 'Streiter', trunk = 60, type = 'outros' },
+
+
+	[GetHashKey('rancherxl')] = { model = 'rancherxl', price = 75000, banned = false, name = 'rancherxl', trunk = 60, type = 'outros' },
+	[GetHashKey('ratloader')] = { model = 'ratloader', price = 75000, banned = false, name = 'ratloader', trunk = 60, type = 'outros' },
+	[GetHashKey('ratloader2')] = { model = 'ratloader2', price = 75000, banned = false, name = 'ratloader2', trunk = 60, type = 'outros' },
+	[GetHashKey('rebel')] = { model = 'rebel', price = 250000, banned = false, name = 'rebel', trunk = 100, type = 'outros' },
+	[GetHashKey('rebel2')] = { model = 'rebel2', price = 250000, banned = false, name = 'rebel2', trunk = 100, type = 'outros' },
+	[GetHashKey('skylift')] = { model = 'skylift', price = 250000, banned = false, name = 'skylift', trunk = 10, type = 'helicoptero' },
+
+
+	[GetHashKey('nero')] = { model = 'nero', price = 4500000, banned = false, name = 'Nero', trunk = 100, type = 'imports' },
+	[GetHashKey('nero2')] = { model = 'nero2', price = 3000000, banned = false, name = 'Nero2', trunk = 100, type = 'imports' },
+	[GetHashKey('massacro2')] = { model = 'massacro2', price = 200000, banned = false, name = 'Massacro2', trunk = 60, type = 'outros' },
+	[GetHashKey('limo2')] = { model = 'limo2', price = 200000, banned = false, name = 'limo2', trunk = 60, type = 'sedans' },
+	[GetHashKey('lancerevolutionx')] = { model = 'lancerevolutionx', price = 110000, banned = false, name = 'lancerevolutionx', trunk = 70, type = 'vip' },
+	[GetHashKey('lancerevolution9')] = { model = 'lancerevolution9', price = 110000, banned = false, name = 'lancerevolution9', trunk = 70, type = 'vip' },
+	[GetHashKey('volatus')] = { model = 'volatus', price = 500000, banned = false, name = 'Volatus', trunk = 200, type = 'vip' },
+	[GetHashKey('vortex')] = { model = 'vortex', price = 800000, banned = false, name = 'Vortex', trunk = 40, type = 'motos' },
+	[GetHashKey('zombiea')] = { model = 'zombiea', price = 250000, banned = false, name = 'Zombiea', trunk = 40, type = 'motos' },
+	[GetHashKey('zombieb')] = { model = 'zombieb', price = 250000, banned = false, name = 'Zombieb', trunk = 40, type = 'motos' },
+
+
+	[GetHashKey('supervolito')] = { model = 'supervolito', price = 500000, banned = false, name = 'Supervolito', trunk = 150, type = 'vip' },
+    [GetHashKey('supervolito2')] = { model = 'supervolito2', price = 500000, banned = false, name = 'Supervolito 2', trunk = 150, type = 'vip' },
+	[GetHashKey('jester2')] = { model = "jester2", price = 2000000, banned = false, name = 'Jester 2', trunk = 100, type = 'imports'},
+	[GetHashKey('jester')] = { model = 'jester', price = 5000000, banned = false, name = 'Jester', trunk = 60, type = 'outros' },
+	[GetHashKey('jb700')] = { model = 'jb700', price = 250000, banned = false, name = 'Jb700', trunk = 60, type = 'outros' },
+	[GetHashKey('italigtb')] = { model = 'italigtb', price = 2000000, banned = false, name = 'Italigtb', trunk = 100, type = 'imports' },
+	[GetHashKey('italigtb2')] = { model = 'italigtb2', price = 2000000, banned = false, name = 'Italigtb2', trunk = 100, type = 'imports' },
+	[GetHashKey('furia')] = { model = 'furia', price = 2000000, banned = false, name = 'Furia', trunk = 100, type = 'imports' },
+	[GetHashKey('fmj')] = { model = 'fmj', price = 1200000, banned = false, name = 'Fmj', trunk = 100, type = 'imports' },
+	[GetHashKey('fordmustang')] = { model = 'fordmustang', price = 1200000, banned = false, name = 'fordmustang', trunk = 70, type = 'imports' },
+	[GetHashKey('emerus')] = { model = 'emerus', price = 2000000, banned = false, name = 'Emerus', trunk = 100, type = 'imports' },
+	[GetHashKey('entity2')] = { model = 'entity2', price = 2000000, banned = false, name = 'Entity2', trunk = 100, type = 'imports' },
+	[GetHashKey('entityxf')] = { model = 'entityxf', price = 2000000, banned = false, name = 'Entityxf', trunk = 100, type = 'imports' },
+	[GetHashKey('esskey')] = { model = 'esskey', price = 400000, banned = false, name = 'Esskey', trunk = 40, type = 'motos' },
+	[GetHashKey('hakuchou')] = { model = 'hakuchou', price = 3000000, banned = false, name = 'Hakuchou', trunk = 40, type = 'motos' },
+	[GetHashKey('hakuchou2')] = { model = 'hakuchou2', price = 200000, banned = false, name = 'Hakuchou2', trunk = 40, type = 'motos' },
+	[GetHashKey('hexer')] = { model = 'hexer', price = 200000, banned = false, name = 'Hexer', trunk = 40, type = 'motos' },
+	[GetHashKey('innovation')] = { model = 'innovation', price = 200000, banned = false, name = 'Innovation', trunk = 40, type = 'motos' },
+	[GetHashKey('lectro')] = { model = 'lectro', price = 200000, banned = false, name = 'Lectro', trunk = 40, type = 'motos' },
+	[GetHashKey('manchez')] = { model = 'manchez', price = 800000, banned = false, name = 'Manchez', trunk = 40, type = 'motos' },
+	[GetHashKey('oppressor')] = { model = 'oppressor', price = 800000, banned = false, name = 'oppressor', trunk = 40, type = 'motos' },
+	[GetHashKey('pcj')] = { model = 'pcj', price = 800000, banned = false, name = 'pcj', trunk = 40, type = 'motos' },
+	[GetHashKey('r1')] = { model = 'r1', price = 800000, banned = false, name = 'r1', trunk = 40, type = 'motos' },
+	[GetHashKey('ruffian')] = { model = 'ruffian', price = 450000, banned = false, name = 'Ruffian', trunk = 40, type = 'motos' },
+	[GetHashKey('sanchez')] = { model = 'sanchez', price = 400000, banned = false, name = 'Sanchez', trunk = 40, type = 'motos' },
+	[GetHashKey('sanchez2')] = { model = 'sanchez2', price = 500000, banned = false, name = 'Sanchez2', trunk = 40, type = 'motos' },
+	[GetHashKey('sanctus')] = { model = 'sanctus', price = 400000, banned = false, name = 'Sanctus', trunk = 40, type = 'motos' },
+	[GetHashKey('shotaro')] = { model = 'shotaro', price = 2000000, banned = false, name = 'Shotaro', trunk = 40, type = 'motos' },
+	[GetHashKey('sovereign')] = { model = 'sovereign', price = 200000, banned = false, name = 'Sovereign', trunk = 40, type = 'motos' },
+	[GetHashKey('wolfsbane')] = { model = 'wolfsbane', price = 400000, banned = false, name = 'Wolfsbane', trunk = 40, type = 'motos' },
+	[GetHashKey('xj')] = { model = 'xj', price = 400000, banned = false, name = 'xj', trunk = 40, type = 'motos' },
+	[GetHashKey('xj6')] = { model = 'xj6', price = 110000, banned = false, name = 'xj', trunk = 30, type = 'vip' },
+
+	
+	[GetHashKey('nightblade')] = { model = 'nightblade', price = 800000, banned = false, name = 'Nightblade', trunk = 60, type = 'outros' },
+	[GetHashKey('stratum')] = { model = 'stratum', price = 800000, banned = false, name = 'stratum', trunk = 60, type = 'outros' },
+
+
+	[GetHashKey('bmx')] = { model = 'bmx', price = 20000, banned = false, name = 'Bmx', trunk = 0, type = 'service' },
+
+	[GetHashKey('autarch')] = { model = 'autarch', price = 3000000, banned = false, name = 'Autarch', trunk = 100, type = 'imports' },
+	[GetHashKey('banshee2')] = { model = 'banshee2', price = 700000, banned = false, name = 'Banshee2', trunk = 100, type = 'imports' },
+	[GetHashKey('xls2')] = { model = 'xls2', price = 350000, banned = false, name = 'Xls2', trunk = 60, type = 'outros' },
+
+	[GetHashKey('dm1200')] = { model = 'dm1200', price = 110000, banned = false, name = 'dm1200', trunk = 30, type = 'vip' },
+    [GetHashKey('civictyper')] = { model = 'civictyper', price = 110000, banned = false, name = 'civictyper', trunk = 70, type = 'vip' },
+    [GetHashKey('audir8')] = { model = 'audir8', price = 110000, banned = false, name = 'audir8', trunk = 70, type = 'vip' },
+    [GetHashKey('audirs7')] = { model = 'audirs7', price = 110000, banned = false, name = 'audirs7', trunk = 70, type = 'vip' },
+    [GetHashKey('oppressor2')] = { model = 'oppressor2', price = 1000010000, banned = true, name = 'oppressor2', trunk = 70, type = 'vip' },
+	[GetHashKey('virgo')] = { model = 'virgo', price = 150000, banned = false, name = 'Virgo', trunk = 60, type = 'outros' },
+	[GetHashKey('virgo2')] = { model = 'virgo2', price = 150000, banned = false, name = 'Virgo2', trunk = 60, type = 'outros' },
+	[GetHashKey('virgo3')] = { model = 'virgo3', price = 150000, banned = false, name = 'Virgo3', trunk = 60, type = 'outros' },
+	[GetHashKey('viseris')] = { model = 'viseris', price = 150000, banned = false, name = 'viseris', trunk = 60, type = 'outros' },
+
+	[GetHashKey('rumpo3')] = { model = 'rumpo3', price = 160000, banned = false, name = 'rumpo3', trunk = 60, type = 'work' },
 
 }
 
@@ -925,7 +1075,7 @@ garagesConfig.garageList = {
 		vehicles = {
 			{vehicle = 'bmx', modelo = 'bmx'},
 			{vehicle = 'scorcher', modelo = 'scorcher'},
-			{vehicle = 'tribike', modelo = 'tribike'},
+
 			{vehicle = 'tribike2', modelo = 'tribike2'},
 			{vehicle = 'tribike3', modelo = 'tribike3'},
 			{vehicle = 'cruiser', modelo = 'cruiser'}
@@ -2119,11 +2269,13 @@ garagesConfig.garageList = {
 	},
 	[135] = {
 		type = 'service',
-		coords = vec3(-1574.3, 232.94, 58.82),
+		coords = vec3(-1632.68,193.43,60.68),
 		perm = 'perm.policia',
 		hidden = false,
 		vehiclePositions = {
-			[1] = {vec3(-1593.2, 249.61, 59.97), h = 294.81}
+			[1] = {vec3(-1625.85,192.43,61.43), h = 204.0},
+			[2] = {vec3(-1620.27,193.34,60.04), h = 205.99},
+			[3] = {vec3(-1615.31,196.66,59.97), h = 205.34},
 		},
 		vehicles = {
 			{vehicle = 'wrbuspol', modelo = 'wrbuspol'},
@@ -2134,12 +2286,13 @@ garagesConfig.garageList = {
 	},
 	[136] = {
 		type = 'service',
-		coords = vec3(-1596.01, 223.03, 58.99),
+		coords = vec3(-1601.69,224.84,59.19),
 		perm = 'perm.policia',
 		hidden = false,
 		vehiclePositions = {
-			[1] = {vec3(-1597.93, 230.7, 58.79), h = 167.25},
-			[2] = {vec3(-1593.96, 232.73, 58.67), h = 167.25}
+			[1] = {vec3(-1600.97,227.89,59.09), h = 296.59},
+			[2] = {vec3(-1602.79,231.61,58.94), h = 294.81},
+			[3] = {vec3(-1604.41,235.38,58.69), h = 296.16},
 		},
 		vehicles = {
 			{vehicle = 'WRc7', modelo = 'WRc7'},
@@ -3228,37 +3381,6 @@ garagesConfig.garageList = {
 		}
 	},
 	
-	[213] = {
-		type = 'service',
-		coords = vec3(-2968.07,68.51,11.61),
-		perm = 'perm.iluminatis',
-		hidden = false,
-		vehiclePositions = {
-			[1] = {vec3(-2973.27,76.13,11.74), h = 147.74},
-			[2] = {vec3(-2979.48,80.17,11.78), h = 147.97},
-			
-			
-		},
-		vehicles = {
-			{vehicle = 'mule', modelo = 'Mule'},
-			{vehicle = 'amarokfac', modelo = 'AMAROK FAC'},
-			{vehicle = 'hondacgfac', modelo = 'HONDA CG FAC'},
-		}
-	},
-	[214] = {
-		type = 'service',
-		coords = vec3(-2925.34,17.39,11.59),
-		perm = 'perm.vips',
-		hidden = true,
-		vehiclePositions = {
-			[1] = {vec3(-2918.24,23.07,11.59), h = 161.76}
-		},
-		vehicles = {
-			{vehicle = 'volatus', modelo = 'volatus'},
-			{vehicle = 'supervolito', modelo = 'supervolito'}
-		}
-	},
-
 	[215] = {
 		type = 'service',
 		coords = vec3(957.46,41.66,81.15),
@@ -3324,11 +3446,11 @@ garagesConfig.garageList = {
 	},
 	[220] = {
 		type = 'service',
-		coords = vec3(-1425.78,-636.3,40.86),
+		coords = vec3(-1573.92,-573.46,116.55),
 		perm = 'perm.vips',
 		hidden = true,
 		vehiclePositions = {
-			[1] = {vec3(-1428.13,-627.98,40.79), h = 29.51}
+			[1] = {vec3(-1581.96,-569.52,116.33), h = 90.82}
 		},
 		vehicles = {
 			{vehicle = 'volatus', modelo = 'volatus'},
@@ -3368,7 +3490,7 @@ garagesConfig.garageList = {
 	[224] = {
 		type = 'service',
 		coords = vec3(969.34,-1044.94,41.03),
-		perm = 'perm.mecanica',
+		perm = 'perm.bennys',
 		hidden = false,
 		vehiclePositions = {
 			[1] = {vec3(975.83,-1042.45,40.81), h = 271.16},
@@ -3380,9 +3502,270 @@ garagesConfig.garageList = {
 			{vehicle = 'benson', modelo = 'benson'},
 			{vehicle = 'wrtrxmecdk', modelo = 'wrtrxmecdk'},
 			
+			
 		}
 	},
-
+	[225] = {
+		type = 'service',
+		coords = vec3(378.86,741.57,191.57),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(375.31,749.41,191.51), h = 41.78}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[226] = {
+		type = 'service',
+		coords = vec3(-459.6,-327.3,34.49),
+		perm = 'perm.unizk',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(-458.14,-332.18,34.36), h = 81.72},
+			[2] = {vec3(-465.42,-325.38,34.36), h = 20.22},
+			
+			
+		},
+		vehicles = {
+			{vehicle = 'WRsprinter22', modelo = 'WRsprinter22'},
+			{vehicle = 'wrx6mf96', modelo = 'wrx6mf96'},
+			{vehicle = 'energyr1200samu', modelo = 'energyr1200samu'},
+			
+		}
+	},
+	[227] = {
+		type = 'service',
+		coords = vec3(105.21,-1781.19,37.34),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(97.85,-1786.49,37.1), h = 140.78}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[228] = {
+		type = 'service',
+		coords = vec3(90.72,-1769.51,37.24),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(83.68,-1774.52,37.1), h = 143.43}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[229] = {
+		type = 'public',
+		coords = vec3(39.45,-1703.68,29.52),
+		perm = nil,
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(36.18,-1706.17,28.88), h = 200.52},
+			[2] = {vec3(31.13,-1707.9,28.88), h = 195.31},
+			[3] = {vec3(26.68,-1709.73,28.88), h = 197.14},
+			[4] = {vec3(42.89,-1711.05,28.88), h = 201.86},
+			[5] = {vec3(48.59,-1708.87,28.88), h = 207.97},
+		}
+	},
+	[230] = {
+		type = 'service',
+		coords = vec3(-2968.07,68.51,11.61),
+		perm = 'perm.iluminatis',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(-2973.27,76.13,11.74), h = 147.74},
+			[2] = {vec3(-2979.48,80.17,11.78), h = 147.97},
+			
+			
+		},
+		vehicles = {
+			{vehicle = 'mule', modelo = 'Mule'},
+			{vehicle = 'amarokfac', modelo = 'AMAROK FAC'},
+			{vehicle = 'hondacgfac', modelo = 'HONDA CG FAC'},
+		}
+	},
+	[231] = {
+		type = 'service',
+		coords = vec3(-2925.34,17.39,11.59),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(-2918.24,23.07,11.59), h = 161.76}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[232] = {
+		type = 'service',
+		coords = vec3(45.13,-1748.36,29.55),
+		perm = 'perm.sto',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(38.0,-1748.24,29.27), h = 48.88},
+			[2] = {vec3(33.88,-1752.84,29.27), h = 48.18},
+			
+			
+		},
+		vehicles = {
+			{vehicle = 'benson', modelo = 'benson'},
+			{vehicle = 'wrtrxmecrace', modelo = 'wrtrxmecrace'},
+			
+			
+		}
+	},
+	[233] = {
+		type = 'service',
+		coords = vec3(87.13,-1766.66,37.2),
+		perm = 'perm.sto',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(83.62,-1774.5,37.1), h = 137.21},
+			
+		},
+		vehicles = {
+			{vehicle = 'as350sto', modelo = 'as350sto'},
+			{vehicle = 'maverick2', modelo = 'maverick2'},
+			
+		}
+	},
+	[234] = {
+		type = 'service',
+		coords = vec3(942.98,-1028.57,55.49),
+		perm = 'perm.bennys',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(950.71,-1025.82,55.55), h = 260.71},
+			
+		},
+		vehicles = {
+			{vehicle = 'as350bennys', modelo = 'as350bennys'},
+			{vehicle = 'maverick2', modelo = 'maverick2'},
+			
+		}
+	},
+	[235] = {
+		type = 'service',
+		coords = vec3(-590.84,3040.61,42.07),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(-598.68,3044.85,41.97), h = 84.64}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[236] = {
+		type = 'service',
+		coords = vec3(1440.47,1091.95,115.83),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(1448.58,1089.24,115.72), h = 266.0}
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[237] = {
+		type = 'public',
+		coords = vec3(-39.81,-1117.01,26.44),
+		perm = nil,
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(-44.94,-1115.81,25.85), h = 2.86},
+			[2] = {vec3(-50.62,-1116.09,25.85), h = 1.8},
+			
+		}
+	},
+	[238] = {
+		type = 'service',
+		coords = vec3(-1148.53,-1731.83,4.79),
+		perm = 'perm.unizk',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(-1142.47,-1734.11,5.0), h = 215.02},
+			[2] = {vec3(-1137.9,-1731.04,5.0), h = 216.09},
+			
+			
+		},
+		vehicles = {
+			{vehicle = 'WRsprinter22', modelo = 'WRsprinter22'},
+			{vehicle = 'wrx6mf96', modelo = 'wrx6mf96'},
+			{vehicle = 'WRsw4', modelo = 'WRsw4'},
+			-- {vehicle = 'WRxreparamedico', modelo = 'WRxreparamedico'},
+			{vehicle = 'energyr1200samu', modelo = 'energyr1200samu'},
+			
+		}
+	},
+	[239] = {
+		type = 'service',
+		coords = vec3(-1154.12,-1745.15,6.05),
+		perm = 'perm.unizk',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(-1160.72,-1739.35,5.85), h = 35.09},
+			
+		},
+		vehicles = {
+			{vehicle = 'wras350samu', modelo = 'wras350samu'},
+			
+			
+		}
+	},
+	[240] = {
+		type = 'service',
+		coords = vec3(-1157.94,-1747.64,6.0),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(-1160.72,-1739.35,5.85), h = 35.09},
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
+	[241] = {
+		type = 'service',
+		coords = vec3(-492.79,-332.01,95.52),
+		perm = 'perm.unizk',
+		hidden = false,
+		vehiclePositions = {
+			[1] = {vec3(-501.41,-333.09,95.39), h = 81.2},
+			
+		},
+		vehicles = {
+			{vehicle = 'wras350samu', modelo = 'wras350samu'},
+			
+			
+		}
+	},
+	[242] = {
+		type = 'service',
+		coords = vec3(-493.76,-336.4,95.42),
+		perm = 'perm.vips',
+		hidden = true,
+		vehiclePositions = {
+			[1] = {vec3(-501.41,-333.09,95.39), h = 81.2},
+		},
+		vehicles = {
+			{vehicle = 'volatus', modelo = 'volatus'},
+			{vehicle = 'supervolito', modelo = 'supervolito'}
+		}
+	},
 	      
 }
 
